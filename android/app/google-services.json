@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "310154729657",
+    "project_id": "greezy-3bfb5",
+    "storage_bucket": "greezy-3bfb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310154729657:android:6eb6f9004479c653232368",
+        "android_client_info": {
+          "package_name": "com.morpheus.greezy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310154729657-e0tfbqnlebr4vmvcv7k9dqdhben1lbfh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.morpheus.greezy",
+            "certificate_hash": "9676cd1abf04b6d51e46250ffdf8cd570dab44fd"
+          }
+        },
+        {
+          "client_id": "310154729657-thvso794mobp9k4d0594p6mpc16c4tbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgTKXw4iB_sWpXcHIQ4Tw8eAklEaqRme8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310154729657-thvso794mobp9k4d0594p6mpc16c4tbu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "310154729657-l6e343jl8ulpih60crluf714q91b48fa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.morpheus.greezy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
