@@ -8,12 +8,12 @@ const kAnimationDuration = Duration(milliseconds: 200);
 class Data {
   static List<SplashData> splashData = [
     SplashData(
-      image: Assets.getSvgPath("ice_cream.svg"),
+      image: Assets.getSvgPath("online_groceries.svg"),
       title: "Welcome!",
       text: "Welcome to Greezy, let's help you order!",
     ),
     SplashData(
-      image: Assets.getSvgPath("online_groceries.svg"),
+      image: Assets.getSvgPath("ice_cream.svg"),
       title: "Take control of your food life",
       text: "We help people connect with food stores \naround their states",
     ),

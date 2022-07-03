@@ -184,8 +184,8 @@ class GreezyTheme {
       ),
       typography: textTypography,
       textTheme: lightTextTheme,
-      primaryColor: const Color(0xFFFE645C),
-      colorScheme: const ColorScheme.light(primary: Color(0xFFFE645C)).copyWith(secondary: const Color(0xFFFBE8DF)),
+      primaryColor: const Color(0xFFFE724C),
+      colorScheme: const ColorScheme.light(primary: Color(0xFFFE724C)).copyWith(secondary: const Color(0xFFFBE8DF)),
     );
   }
 
@@ -206,8 +206,8 @@ class GreezyTheme {
       ),
       typography: textTypography,
       textTheme: darkTextTheme,
-      primaryColor: const Color(0xFFFE645C),
-      colorScheme: const ColorScheme.dark(primary: Color(0xFFFE645C)).copyWith(secondary: const Color(0xFFFBE8DF)),
+      primaryColor: const Color(0xFFFE724C),
+      colorScheme: const ColorScheme.dark(primary: Color(0xFFFE724C)).copyWith(secondary: const Color(0xFFFBE8DF)),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
 import 'package:greezy/domain/app_constants.dart';
+import 'package:greezy/domain/assets.dart';
 import 'package:greezy/presentation/shared/default_button.dart';
 
 import 'widgets/splash_content.dart';
@@ -68,10 +69,12 @@ class _AuthScreenState extends State<AuthScreen> {
                     DefaultButton(
                       isPrimary: false,
                       hasBorder: true,
+                      hasIcon: true,
                       text: "Sign in with Google",
                       onPressed: () {
                         context.read<GoogleSignInBloc>().add(const GoogleSignInEvent.signIn());
                       },
+                      child: Image.asset(Assets.getImagePath("google_icon.png"), height: 20),
                     ),
                   ],
                 ),
