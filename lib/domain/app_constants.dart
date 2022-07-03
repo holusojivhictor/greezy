@@ -29,3 +29,17 @@ class Data {
 const languagesMap = {
   AppLanguageType.english: LanguageModel('en', 'US'),
 };
+/// Validator strings
+final RegExp emailValidatorRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+final RegExp phoneNumberValidatorRegExp = RegExp(r"^[0-9]");
+const String kEmailNullError = "Please enter your email.";
+const String kFirstNameNullError = "Please enter your first name.";
+const String kAddressNullError = "Please enter your address.";
+const String kLastNameNullError = "Please enter your last name.";
+const String kPhoneNumberNullError = "Please enter your phone number.";
+const String kInvalidPhoneNumberError = "Please enter a valid phone number. Signs not necessary.";
+const String kInvalidEmailError = "Please enter a valid email.";
+const String kPassNullError = "Please enter your password.";
+const String kPassMatchNullError = "Password does not match.";
+const String kShortPassError = "Password should be longer than 8 characters.";
+const String kConfirmPassNullError = "Please confirm your password.";

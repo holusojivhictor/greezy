@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:greezy/application/bloc.dart';
 import 'package:greezy/application/result_state/result_state.dart';
 import 'package:greezy/domain/models/models.dart';
-import 'package:greezy/domain/models/network/network_exceptions.dart';
 import 'package:greezy/domain/services/services.dart';
 
 part 'google_sign_in_bloc.freezed.dart';
