@@ -1,0 +1,602 @@
+{
+  "menu": [
+    {
+      "id": 14,
+      "title": "Garlicky Shrimp Tacos",
+      "price": 42.0,
+      "description": "Description",
+      "cuisineType": "mexican",
+      "image": "1e624cdcc9db31f0727652328eb49131-l.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 231
+      },
+      "healthLabels": [
+        "Pescatarian",
+        "Egg-Free",
+        "Peanut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "starter"
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Roasted Lemon Chicken With Pistachios",
+      "price": 50.3,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "be99f247a5109df34704a84150dc4788-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 299
+      },
+      "healthLabels": [
+        "Gluten-Free",
+        "Wheat-Free",
+        "Egg-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Southwestern Burger",
+      "price": 26.6,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "e24aa386bb5dc6652322e16bdd7a898a-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 291
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Dairy-Free",
+        "Peanut-Free"
+      ],
+      "mealType": [
+        "brunch"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 56,
+      "title": "Shrimp And White-Bean Salad",
+      "price": 43.7,
+      "description": "Description",
+      "cuisineType": "south east asian",
+      "image": "4036fb246f4272abb761696d4ff12824-l.jpg",
+      "rating": {
+        "rate": 4.3,
+        "count": 108
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Dairy-Free",
+        "Gluten-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "salad"
+      ]
+    },
+    {
+      "id": 70,
+      "title": "Grilled Eggplant And Olive Pizza",
+      "price": 25.7,
+      "description": "Description",
+      "cuisineType": "italian",
+      "image": "1d543cfd91a1109c93dbdf21201ec9ce-l.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 94
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Kidney-Friendly",
+        "Vegetarian"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Pizza Toast",
+      "price": 30.1,
+      "description": "Description",
+      "cuisineType": "italian",
+      "image": "a3e1050df0a76464014be868bc7de5a8-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 50
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Egg-Free",
+        "Peanut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 98,
+      "title": "BLT Pasta Salad",
+      "price": 59.6,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "bf32b8e82898789beec5821146efae8b-l.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 292
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Keto-Friendly",
+        "Dairy-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "salad"
+      ]
+    },
+    {
+      "id": 112,
+      "title": "Turkey Sandwich With Watercress And Apple",
+      "price": 59.6,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "f23aa2e1e3d1112800eb37b691282122-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 232
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Low Potassium",
+        "Kidney-Friendly"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 126,
+      "title": "Sausage Biscuit Recipe",
+      "price": 55.7,
+      "description": "Description",
+      "cuisineType": "central europe",
+      "image": "4cfa4648463e37b5fe25e5769a57e509-l.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 148
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Low Potassium",
+        "Kidney-Friendly"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "biscuits and cookies"
+      ]
+    },
+    {
+      "id": 140,
+      "title": "Sourdough And Sausage Stuffing",
+      "price": 54.7,
+      "description": "Description",
+      "cuisineType": "central europe",
+      "image": "6a2efc6209849050af79cb42af969ffd-l.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 222
+      },
+      "healthLabels": [
+        "Egg-Free",
+        "Peanut-Free",
+        "Tree-Nut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "preps"
+      ]
+    },
+    {
+      "id": 154,
+      "title": "My Family\u2019s Noodle Kugel",
+      "price": 33.6,
+      "description": "Description",
+      "cuisineType": "asian",
+      "image": "3bfcc3d99efce50afeb5aa527c592b39-l.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 151
+      },
+      "healthLabels": [
+        "Kidney-Friendly",
+        "Vegetarian",
+        "Pescatarian"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 168,
+      "title": "Squash Risotto",
+      "price": 34.0,
+      "description": "Description",
+      "cuisineType": "italian",
+      "image": "f72347a010350be811a4929fd40b4a6e-l.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 260
+      },
+      "healthLabels": [
+        "Vegetarian",
+        "Pescatarian",
+        "Egg-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "starter"
+      ]
+    },
+    {
+      "id": 182,
+      "title": "Fried Rice With Ham",
+      "price": 42.8,
+      "description": "Description",
+      "cuisineType": "chinese",
+      "image": "90d6122d6707c888358692227a511b72-l.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 237
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Dairy-Free",
+        "Tree-Nut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 196,
+      "title": "Smoky Chicken Tacos",
+      "price": 68.5,
+      "description": "Description",
+      "cuisineType": "mexican",
+      "image": "8706faecb30dbdccd3678834f336531f-l.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 160
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Dairy-Free",
+        "Gluten-Free"
+      ],
+      "mealType": [
+        "brunch"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 210,
+      "title": "Meatball Street Tacos",
+      "price": 39.9,
+      "description": "Description",
+      "cuisineType": "mexican",
+      "image": "d8896ad2322e9bf5943db75bb6ec0f3c-l.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 109
+      },
+      "healthLabels": [
+        "Egg-Free",
+        "Peanut-Free",
+        "Tree-Nut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 224,
+      "title": "Firecracker Chicken",
+      "price": 34.5,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "09d812970c44779c82b8526180095706-l.jpg",
+      "rating": {
+        "rate": 4.3,
+        "count": 238
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Kidney-Friendly",
+        "Keto-Friendly"
+      ],
+      "mealType": [
+        "brunch"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 238,
+      "title": "Bison Burger",
+      "price": 44.3,
+      "description": "Description",
+      "cuisineType": "nordic",
+      "image": "18a94f3040c1b065aab22ed313b50a53-l.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 276
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Keto-Friendly",
+        "Paleo"
+      ],
+      "mealType": [
+        "brunch"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 252,
+      "title": "BLT Salad For Two",
+      "price": 64.6,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "5bdcbb078b536704e4aca1e241d381ae-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 75
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Low Potassium",
+        "Kidney-Friendly"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "salad"
+      ]
+    },
+    {
+      "id": 266,
+      "title": "Pepperoni Pizza Grilled Cheese",
+      "price": 66.1,
+      "description": "Description",
+      "cuisineType": "italian",
+      "image": "f99c4ec199f065478906fa9dae0aff71-l.jpg",
+      "rating": {
+        "rate": 4.9,
+        "count": 267
+      },
+      "healthLabels": [
+        "Egg-Free",
+        "Peanut-Free",
+        "Tree-Nut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 280,
+      "title": "Lahmahjoon Pizza",
+      "price": 67.8,
+      "description": "Description",
+      "cuisineType": "italian",
+      "image": "e4574e9a5d1c5cf3284c4adc58502502-l.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 66
+      },
+      "healthLabels": [
+        "Egg-Free",
+        "Peanut-Free",
+        "Soy-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 294,
+      "title": "Smoked Salmon Pasta",
+      "price": 61.5,
+      "description": "Description",
+      "cuisineType": "nordic",
+      "image": "743e7e89ca76a21162a99e60e483e7fc-l.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 165
+      },
+      "healthLabels": [
+        "Pescatarian",
+        "Mediterranean",
+        "Egg-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 308,
+      "title": "Tomato, Bacon, and Garlic Mayo Sandwich",
+      "price": 31.9,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "3f8b94fe02c7521564eff30e2232ca6f-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 247
+      },
+      "healthLabels": [
+        "Egg-Free",
+        "Peanut-Free",
+        "Tree-Nut-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 322,
+      "title": "Ham Banh Mi Sandwich",
+      "price": 27.5,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "aa2143f06c106b930b85fda34b2e361b-l.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 211
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Low Potassium",
+        "Kidney-Friendly"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "sandwiches"
+      ]
+    },
+    {
+      "id": 336,
+      "title": "Chicken Sausage And Potato Skillet",
+      "price": 39.9,
+      "description": "Description",
+      "cuisineType": "american",
+      "image": "9f5b4049981ffe777bd9b51ba6ee8fc5-l.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 247
+      },
+      "healthLabels": [
+        "Sugar-Conscious",
+        "Dairy-Free",
+        "Gluten-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    },
+    {
+      "id": 350,
+      "title": "Seafood Miso Noodle Soup",
+      "price": 36.1,
+      "description": "Description",
+      "cuisineType": "japanese",
+      "image": "e8fefc4938f92ed7ff6e9945dda5080c-l.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 128
+      },
+      "healthLabels": [
+        "Mediterranean",
+        "Dairy-Free",
+        "Gluten-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "soup"
+      ]
+    },
+    {
+      "id": 364,
+      "title": "Prawn, Artichoke And Lemon Baked Risotto",
+      "price": 58.2,
+      "description": "Description",
+      "cuisineType": "italian",
+      "image": "d5a161a358eda789881d3d55bfaf9082-l.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 149
+      },
+      "healthLabels": [
+        "Gluten-Free",
+        "Wheat-Free",
+        "Egg-Free"
+      ],
+      "mealType": [
+        "lunch/dinner"
+      ],
+      "dishType": [
+        "main course"
+      ]
+    }
+  ]
+}

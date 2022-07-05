@@ -21,4 +21,7 @@ enum MenuDishType {
   soup,
   starter,
   sweets,
+  egg,
+  christmas,
+  @JsonValue('special occasions') specialOccasions,
 }

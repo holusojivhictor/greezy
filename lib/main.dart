@@ -46,6 +46,13 @@ class Greezy extends StatelessWidget {
             return GoogleSignInBloc(authService, ctx.read<SessionBloc>());
           },
         ),
+        BlocProvider(create: (ctx) => MainTabBloc()),
+        BlocProvider(
+          create: (ctx) {
+            final greezyService = getIt<GreezyService>();
+            return HomeBloc(greezyService);
+          },
+        ),
         BlocProvider(
           create: (ctx) {
             final loggingService = getIt<LoggingService>();

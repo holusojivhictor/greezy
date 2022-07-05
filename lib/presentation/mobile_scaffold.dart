@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
+import 'package:greezy/presentation/home/home_page.dart';
 import 'package:greezy/presentation/shared/extensions/focus_scope_node_extensions.dart';
 
 class MobileScaffold extends StatefulWidget {
@@ -41,7 +42,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             controller: widget.tabController,
             physics: const NeverScrollableScrollPhysics(),
             children: [
-              Container(),
+              const HomePage(),
               Container(),
               Container(),
               Container(),
