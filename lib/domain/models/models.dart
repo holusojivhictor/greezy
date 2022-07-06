@@ -8,3 +8,4 @@ export 'db/menu/menu_file_model.dart';
 export 'db/menu/menu_file.dart';
 export 'menu/menu_card_model.dart';
 export 'user_profile/user_model.dart';
+export 'entities/inventory/inventory_item.dart';

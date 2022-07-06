@@ -55,6 +55,12 @@ class Greezy extends StatelessWidget {
         ),
         BlocProvider(
           create: (ctx) {
+            final greezyService = getIt<GreezyService>();
+            return MenuBloc(greezyService);
+          },
+        ),
+        BlocProvider(
+          create: (ctx) {
             final loggingService = getIt<LoggingService>();
             final greezyService = getIt<GreezyService>();
             final settingsService = getIt<SettingsService>();

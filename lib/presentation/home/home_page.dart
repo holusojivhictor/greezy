@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greezy/presentation/home/widgets/sliver_featured_menu.dart';
+import 'package:greezy/presentation/home/widgets/sliver_order_banner.dart';
 import 'package:greezy/presentation/home/widgets/sliver_popular_menu.dart';
 import 'package:greezy/presentation/home/widgets/sliver_search_bar.dart';
 import 'package:greezy/presentation/shared/clickable_title.dart';
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
           slivers: [
             SliverHomeGreet(),
             SliverSearchBar(),
+            // SliverOrderBanner(),
             SliverClickableTitle(title: "Featured meals"),
             SliverFeaturedMenu(),
             SliverClickableTitle(title: "Popular meals"),
