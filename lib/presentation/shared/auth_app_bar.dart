@@ -19,7 +19,7 @@ class AuthAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       title: Text(
-        "Sign Up",
+        title,
         style: theme.textTheme.bodyLarge!.copyWith(color: Colors.grey),
       ),
       leading: InkWell(

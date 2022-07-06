@@ -9,5 +9,8 @@ class HomeState with _$HomeState {
     required List<MenuCardModel> popularMenu,
     required String displayName,
     required String timeParsed,
+    String? search,
+    MenuMealType? mealType,
+    MenuMealType? tempMealType,
   }) = _LoadedState;
 }

@@ -12,6 +12,7 @@ class MenuCardModel with _$MenuCardModel {
     required String image,
     required double rating,
     required int ratingCount,
+    required List<MenuMealType> mealType,
     required List<MenuDishType> dishType,
   }) = _MenuCardModel;
 

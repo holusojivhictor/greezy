@@ -171,7 +171,7 @@ class MenuItemCard extends StatelessWidget {
   }
 
   List<Widget> getTags() {
-    return dishType.map((e) => ContainerTag(tagText: Assets.translateDishType(e), hasBorder: false)).toList();
+    return dishType.map((e) => ContainerTag(tagText: Assets.translateMenuDishType(e), hasBorder: false)).toList();
   }
 }
 

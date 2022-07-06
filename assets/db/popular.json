@@ -17,7 +17,8 @@
         "Peanut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "sandwiches"
@@ -40,7 +41,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "condiments and sauces"
@@ -63,7 +65,8 @@
         "Wheat-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "sandwiches"
@@ -86,7 +89,8 @@
         "Wheat-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "salad"
@@ -109,7 +113,8 @@
         "Pescatarian"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "salad"
@@ -132,7 +137,8 @@
         "Vegetarian"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -155,7 +161,8 @@
         "Pescatarian"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -178,7 +185,8 @@
         "Peanut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "salad"
@@ -201,7 +209,8 @@
         "Vegetarian"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "sandwiches"
@@ -224,7 +233,8 @@
         "Egg-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -247,7 +257,8 @@
         "Peanut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -270,7 +281,8 @@
         "Peanut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "soup"
@@ -293,7 +305,8 @@
         "Egg-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -316,7 +329,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -339,7 +353,8 @@
         "Egg-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "salad"
@@ -362,7 +377,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -385,7 +401,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "soup",
@@ -409,7 +426,8 @@
         "Pescatarian"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "sandwiches"
@@ -432,7 +450,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "sandwiches"
@@ -455,7 +474,8 @@
         "Keto-Friendly"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "salad"
@@ -478,8 +498,9 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner",
-        "brunch"
+        "brunch",
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "desserts",
@@ -503,7 +524,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -526,7 +548,8 @@
         "Peanut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -549,7 +572,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "sandwiches"
@@ -572,7 +596,8 @@
         "Tree-Nut-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -595,7 +620,8 @@
         "Wheat-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"
@@ -618,7 +644,8 @@
         "Gluten-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "soup"
@@ -641,7 +668,8 @@
         "Egg-Free"
       ],
       "mealType": [
-        "lunch/dinner"
+        "lunch",
+        "dinner"
       ],
       "dishType": [
         "main course"

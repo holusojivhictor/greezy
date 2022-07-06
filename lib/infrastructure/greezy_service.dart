@@ -67,6 +67,7 @@ class GreezyServiceImpl implements GreezyService {
       image: menu.image,
       rating: menu.rating.rate,
       ratingCount: menu.rating.count,
+      mealType: menu.mealType,
       dishType: menu.dishType,
     );
   }

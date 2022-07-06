@@ -25,5 +25,5 @@ enum MenuCuisineType {
   @JsonValue('south east asian')
   southEastAsian,
   korean,
-  greek
+  greek,
 }

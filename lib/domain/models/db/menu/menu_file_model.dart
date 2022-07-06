@@ -15,6 +15,7 @@ class MenuFileModel with _$MenuFileModel {
     required String image,
     required RatingModel rating,
     required List<String> healthLabels,
+    required List<MenuMealType> mealType,
     required List<MenuDishType> dishType,
   }) = _MenuFileModel;
 

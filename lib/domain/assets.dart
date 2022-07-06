@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:greezy/domain/app_constants.dart';
 
 import 'enums/enums.dart';
@@ -24,7 +26,45 @@ class Assets {
     }
   }
 
-  static String translateDishType(MenuDishType type) {
+  static String translateMenuMealType(MenuMealType type) {
+    switch (type) {
+      case MenuMealType.breakfast:
+        return "Breakfast";
+      case MenuMealType.brunch:
+        return "Brunch";
+      case MenuMealType.lunch:
+        return "Lunch";
+      case MenuMealType.dinner:
+        return "Dinner";
+      case MenuMealType.snack:
+        return "Snack";
+      case MenuMealType.teatime:
+        return "Tea time";
+      default:
+        throw Exception('Invalid menu meal type = $type');
+    }
+  }
+
+  static IconData translateMenuMealTypeIcon(MenuMealType type) {
+    switch (type) {
+      case MenuMealType.breakfast:
+        return Icons.breakfast_dining_outlined;
+      case MenuMealType.brunch:
+        return Icons.brunch_dining_outlined;
+      case MenuMealType.lunch:
+        return Icons.lunch_dining_outlined;
+      case MenuMealType.dinner:
+        return Icons.dinner_dining_outlined;
+      case MenuMealType.snack:
+        return Icons.emoji_events_outlined;
+      case MenuMealType.teatime:
+        return Icons.ac_unit_outlined;
+      default:
+        throw Exception('Invalid menu meal type = $type');
+    }
+  }
+
+  static String translateMenuDishType(MenuDishType type) {
     switch (type) {
       case MenuDishType.biscuitsAndCookies:
         return "Biscuits and Cookies";

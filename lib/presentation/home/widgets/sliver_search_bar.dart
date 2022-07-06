@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:greezy/application/bloc.dart';
 import 'package:greezy/presentation/shared/search_field.dart';
 
 class SliverSearchBar extends StatelessWidget {
@@ -13,9 +15,16 @@ class SliverSearchBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SearchField(
-              value: "",
-              searchChanged: (v) {},
+            BlocBuilder<HomeBloc, HomeState>(
+              builder: (context, state) => state.map(
+                loading: (_) => const SizedBox.shrink(),
+                loaded: (state) {
+                  return SearchField(
+                    value: state.search,
+                    searchChanged: (v) => context.read<HomeBloc>().add(HomeEvent.searchChanged(search: v)),
+                  );
+                },
+              ),
             ),
             InkWell(
               onTap: () {},
@@ -24,7 +33,7 @@ class SliverSearchBar extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                  color: theme.primaryColor.withOpacity(0.7),
+                  color: theme.primaryColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(Icons.shopping_cart_outlined, size: 20, color: Colors.white),

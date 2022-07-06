@@ -138,6 +138,6 @@ class FeaturedCard extends StatelessWidget {
   }
 
   List<Widget> getTags() {
-    return dishType.map((e) => ContainerTag(tagText: Assets.translateDishType(e))).toList();
+    return dishType.map((e) => ContainerTag(tagText: Assets.translateMenuDishType(e))).toList();
   }
 }
