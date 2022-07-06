@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
 import 'package:greezy/injection.dart';
+import 'package:greezy/presentation/menu_item/widgets/menu_item_detail_bottom.dart';
+import 'package:greezy/presentation/menu_item/widgets/menu_item_detail_top.dart';
+import 'package:greezy/presentation/shared/loading.dart';
+import 'package:greezy/presentation/shared/scaffold_with_fab.dart';
 
 class MenuItemPage extends StatelessWidget {
   final int itemKey;
@@ -22,6 +26,21 @@ class _PortraitLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ScaffoldWithFab(
+      child: BlocBuilder<MenuItemBloc, MenuItemState>(
+        builder: (context, state) => state.map(
+          loading: (_) => const Loading(useScaffold: false),
+          loaded: (state) => Stack(
+            fit: StackFit.passthrough,
+            clipBehavior: Clip.none,
+            alignment: Alignment.topCenter,
+            children: const [
+              MenuItemDetailTop(),
+              MenuItemDetailBottom(),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

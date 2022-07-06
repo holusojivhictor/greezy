@@ -32,9 +32,21 @@ class SliverHomeGreet extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Text(
-                    "It's ${state.timeParsed} time!",
-                    style: theme.textTheme.bodyLarge!.copyWith(fontSize: 18),
+                  RichText(
+                    text: TextSpan(
+                      text: "It's ",
+                      style: theme.textTheme.bodyLarge!.copyWith(fontSize: 15),
+                      children: <TextSpan> [
+                        TextSpan(
+                          text: state.timeParsed,
+                          style: theme.textTheme.bodyLarge!.copyWith(fontSize: 15, color: theme.primaryColor),
+                        ),
+                        TextSpan(
+                          text: " time!",
+                          style: theme.textTheme.bodyLarge!.copyWith(fontSize: 15),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               );

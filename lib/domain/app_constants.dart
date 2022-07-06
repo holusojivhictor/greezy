@@ -46,3 +46,5 @@ const String kPassNullError = "Please enter your password.";
 const String kPassMatchNullError = "Password does not match.";
 const String kShortPassError = "Password should be longer than 8 characters.";
 const String kConfirmPassNullError = "Please confirm your password.";
+
+const String constantDescription = "This meal was prepared top quality ingredients in order to provide you our customer, with the best dining experience. Click on order to process your purchase.";

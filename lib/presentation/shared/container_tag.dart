@@ -4,17 +4,20 @@ class ContainerTag extends StatelessWidget {
   final Color color;
   final bool hasBorder;
   final String tagText;
+  final bool isHealthLabel;
+
   const ContainerTag({
     Key? key,
+    required this.tagText,
     this.color = Colors.white,
     this.hasBorder = true,
-    required this.tagText,
+    this.isHealthLabel = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(2),
+      padding: EdgeInsets.all(isHealthLabel ? 5 : 2),
       decoration: BoxDecoration(
         color: color,
         border: Border.all(color: hasBorder ? Colors.grey.withOpacity(0.5) : Colors.white),
@@ -22,7 +25,7 @@ class ContainerTag extends StatelessWidget {
       ),
       child: Text(
         tagText,
-        style: const TextStyle(fontSize: 10),
+        style: TextStyle(fontSize: isHealthLabel ? 14 : 10),
       ),
     );
   }
