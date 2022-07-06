@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
           slivers: [
             SliverHomeGreet(),
             SliverSearchBar(),
-            // SliverOrderBanner(),
+            SliverOrderBanner(),
             SliverClickableTitle(title: "Featured meals"),
             SliverFeaturedMenu(),
             SliverClickableTitle(title: "Popular meals"),

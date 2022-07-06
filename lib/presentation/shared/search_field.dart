@@ -59,12 +59,15 @@ class _SearchFieldState extends State<SearchField> {
                 cursorColor: theme.primaryColor,
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.go,
-                decoration: const InputDecoration(
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+                decoration: InputDecoration(
+                  enabledBorder: Styles.searchFieldBorder,
+                  focusedBorder: Styles.searchFieldBorder,
+                  border: Styles.searchFieldBorder,
+                  filled: true,
+                  fillColor: theme.scaffoldBackgroundColor,
                   hintText: "Search Meal",
-                  prefixIcon: Icon(Icons.search, color: Colors.black54),
-                  contentPadding: EdgeInsets.symmetric(
+                  prefixIcon: const Icon(Icons.search, color: Colors.black54),
+                  contentPadding: const EdgeInsets.symmetric(
                     horizontal: 10,
                     vertical: 13,
                   ),

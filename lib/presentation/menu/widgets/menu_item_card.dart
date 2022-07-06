@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:greezy/domain/assets.dart';
 import 'package:greezy/domain/enums/enums.dart';
 import 'package:greezy/domain/models/models.dart';
+import 'package:greezy/presentation/menu_item/menu_item_page.dart';
 import 'package:greezy/presentation/shared/container_tag.dart';
 import 'package:greezy/presentation/shared/custom_card.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -77,16 +78,19 @@ class MenuItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return InkWell(
-      onTap: () {},
+      onTap: () => _goToMealPage(context),
       child: CustomCard(
         margin: EdgeInsets.zero,
         clipBehavior: Clip.hardEdge,
         shape: Styles.mainCardShape,
-        elevation: withElevation ? Styles.cardTenElevation : 0,
+        borderRadius: Styles.mainCardBorderRadius,
+        elevation: withElevation ? 2 : 0,
+        shadowColor: Colors.white12,
         color: kWhite,
         child: SizedBox(
           width: width,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Stack(
                 alignment: AlignmentDirectional.topCenter,
@@ -103,15 +107,14 @@ class MenuItemCard extends StatelessWidget {
                       RatingOverlay(rating: rating),
                     ],
                   ),
-                  if (isPopular)
-                    Positioned(
-                      bottom: 5,
-                      left: 5,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: getTags(),
-                      ),
+                  Positioned(
+                    bottom: 5,
+                    left: 5,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: getTags(),
                     ),
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
@@ -170,8 +173,22 @@ class MenuItemCard extends StatelessWidget {
     );
   }
 
+  Future<void> _goToMealPage(BuildContext context) async {
+    if (isInSelectionMode) {
+      Navigator.pop(context, id);
+      return;
+    }
+
+    final route = MaterialPageRoute(builder: (c) => MenuItemPage(itemKey: id));
+    await Navigator.push(context, route);
+    await route.completed;
+  }
+
   List<Widget> getTags() {
-    return dishType.map((e) => ContainerTag(tagText: Assets.translateMenuDishType(e), hasBorder: false)).toList();
+    return dishType.map((e) => Padding(
+      padding: const EdgeInsets.only(right: 5),
+      child: ContainerTag(tagText: Assets.translateMenuDishType(e), hasBorder: false),
+    )).toList();
   }
 }
 
@@ -185,7 +202,7 @@ class RadialGradientMask extends StatelessWidget {
       shaderCallback: (bounds) => const RadialGradient(
         center: Alignment.center,
         radius: 0.5,
-        colors: [Colors.red, Colors.orange],
+        colors: [Color(0xFFDD5E65), Color(0xFFDD5E65)],
         tileMode: TileMode.mirror,
       ).createShader(bounds),
       child: child,

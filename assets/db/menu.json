@@ -5641,29 +5641,6 @@
       ]
     },
     {
-      "id": 236,
-      "title": "5 Napkin Burger's IPA Blondie Milkshake",
-      "price": 17.01,
-      "description": "Description",
-      "cuisineType": "american",
-      "image": "defa7d3f2c2e8a509967c4cbaaabf2c3-l.jpg",
-      "rating": {
-        "rate": 4.3,
-        "count": 35
-      },
-      "healthLabels": [
-        "Vegetarian",
-        "Pescatarian",
-        "Egg-Free"
-      ],
-      "mealType": [
-        "teatime"
-      ],
-      "dishType": [
-        "sandwiches"
-      ]
-    },
-    {
       "id": 237,
       "title": "Sweet Potato Burgers",
       "price": 13.04,

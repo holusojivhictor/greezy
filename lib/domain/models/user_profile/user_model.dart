@@ -1,7 +1,7 @@
 class UserModel {
   final String providerId;
   final String uid;
-  final String displayName;
+  final String? displayName;
   final String emailAddress;
 
   UserModel({

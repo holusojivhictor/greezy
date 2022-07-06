@@ -20,11 +20,11 @@ class SliverOrderBanner extends StatelessWidget {
           child: GradientCard(
             elevation: 0,
             shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
+              stops: [0.1, 1],
               colors: [
-                const Color(0xFFFE724C),
-                const Color(0xFFFE724C).withOpacity(0.5),
-                // kForestGreen,
+                Color(0xFFDD5E65),
+                Color(0xFFE79086),
               ],
             ),
             child: Stack(
@@ -45,21 +45,23 @@ class SliverOrderBanner extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  right: -50,
-                  bottom: -50,
-                  child: Image.asset(
-                    Assets.getImagePath("sandwich.png"),
-                    height: 220,
-                  ),
-                ),
-                Positioned(
-                  left: 20,
+                  left: 120,
                   child: Column(
                     children: const [
                       BackgroundText(),
                       BackgroundText(),
                       BackgroundText(),
+                      BackgroundText(),
                     ],
+                  ),
+                ),
+                Positioned(
+                  right: -50,
+                  bottom: -50,
+                  child: Image.asset(
+                    Assets.getImagePath("sandwich.png"),
+                    height: 220,
+                    filterQuality: FilterQuality.high,
                   ),
                 ),
                 Positioned(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
 import 'package:greezy/presentation/home/home_page.dart';
+import 'package:greezy/presentation/menu/menu_page.dart';
 import 'package:greezy/presentation/settings/settings_page.dart';
 import 'package:greezy/presentation/shared/extensions/focus_scope_node_extensions.dart';
 
@@ -44,7 +45,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             physics: const NeverScrollableScrollPhysics(),
             children: [
               const HomePage(),
-              Container(),
+              const MenuPage(),
               Container(),
               const SettingsPage(),
             ],

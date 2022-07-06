@@ -116,7 +116,7 @@ class GreezyServiceImpl implements GreezyService {
         final name = provider.displayName;
         final emailAddress = provider.email;
 
-        return UserModel(providerId: providerId, uid: uid!, displayName: name!, emailAddress: emailAddress!);
+        return UserModel(providerId: providerId, uid: uid!, displayName: name, emailAddress: emailAddress!);
       }
     }
     return UserModel(providerId: "", uid: "", displayName: "", emailAddress: "");

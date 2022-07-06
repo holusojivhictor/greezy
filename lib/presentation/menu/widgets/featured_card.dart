@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:greezy/domain/assets.dart';
 import 'package:greezy/domain/enums/enums.dart';
 import 'package:greezy/domain/models/models.dart';
+import 'package:greezy/presentation/menu_item/menu_item_page.dart';
 import 'package:greezy/presentation/shared/container_tag.dart';
 import 'package:greezy/presentation/shared/custom_card.dart';
 import 'package:greezy/presentation/shared/price_overlay.dart';
@@ -58,7 +59,7 @@ class FeaturedCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return InkWell(
-      onTap: () {},
+      onTap: () => _goToMealPage(context),
       child: CustomCard(
         margin: EdgeInsets.zero,
         clipBehavior: Clip.hardEdge,
@@ -135,6 +136,12 @@ class FeaturedCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _goToMealPage(BuildContext context) async {
+    final route = MaterialPageRoute(builder: (c) => MenuItemPage(itemKey: id));
+    await Navigator.push(context, route);
+    await route.completed;
   }
 
   List<Widget> getTags() {

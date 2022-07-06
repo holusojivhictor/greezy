@@ -88,6 +88,11 @@ class Styles {
     borderSide: BorderSide(width: 1.5, color: Colors.grey),
   );
 
+  static const searchFieldBorder = OutlineInputBorder(
+    borderSide: BorderSide(width: 0.3, color: Colors.grey),
+    borderRadius: BorderRadius.all(Radius.circular(10)),
+  );
+
   static const onboardingFieldBorder = OutlineInputBorder(
     borderSide: BorderSide(color: Colors.black, width: 1),
     borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -178,15 +183,15 @@ class GreezyTheme {
       indicatorColor: Colors.black,
       textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.black),
       brightness: Brightness.light,
-      scaffoldBackgroundColor: const Color(0xFFF1F1F1),
+      scaffoldBackgroundColor: const Color(0xFFFAFAFA),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
         backgroundColor: Colors.black,
       ),
       typography: textTypography,
       textTheme: lightTextTheme,
-      primaryColor: const Color(0xFFFE724C),
-      colorScheme: const ColorScheme.light(primary: Color(0xFFFE724C)).copyWith(secondary: const Color(0xFFFBE8DF)),
+      primaryColor: const Color(0xFFDD5E65),
+      colorScheme: const ColorScheme.light(primary: Color(0xFFDD5E65)).copyWith(secondary: const Color(0xFFE79086)),
     );
   }
 
@@ -207,8 +212,8 @@ class GreezyTheme {
       ),
       typography: textTypography,
       textTheme: darkTextTheme,
-      primaryColor: const Color(0xFFFE724C),
-      colorScheme: const ColorScheme.dark(primary: Color(0xFFFE724C)).copyWith(secondary: const Color(0xFFFBE8DF)),
+      primaryColor: const Color(0xFFDD5E65),
+      colorScheme: const ColorScheme.dark(primary: Color(0xFFDD5E65)).copyWith(secondary: const Color(0xFFE79086)),
     );
   }
 }

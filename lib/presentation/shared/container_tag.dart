@@ -22,7 +22,7 @@ class ContainerTag extends StatelessWidget {
       ),
       child: Text(
         tagText,
-        style: TextStyle(fontSize: 10),
+        style: const TextStyle(fontSize: 10),
       ),
     );
   }

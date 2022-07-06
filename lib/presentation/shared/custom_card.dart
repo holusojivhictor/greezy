@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
+  final BorderRadius? borderRadius;
   final ShapeBorder? shape;
   final Clip clipBehavior;
   final EdgeInsetsGeometry margin;
@@ -15,6 +16,7 @@ class CustomCard extends StatelessWidget {
   const CustomCard({
     Key? key,
     this.color,
+    this.borderRadius,
     this.shape,
     this.margin = const EdgeInsets.all(4),
     this.clipBehavior = Clip.none,
@@ -41,10 +43,18 @@ class CustomCard extends StatelessWidget {
         clipBehavior: clipBehavior,
         child: Container(
           margin: margin,
-          decoration: ShapeDecoration(
-            shape: shape ?? const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
+          decoration: BoxDecoration(
+            borderRadius: borderRadius ?? const BorderRadius.all(Radius.circular(4)),
             color: color,
             gradient: gradient,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.1),
+                spreadRadius: 5,
+                blurRadius: 5,
+                offset: const Offset(0, 3),
+              ),
+            ],
           ),
           child: child,
         ),
