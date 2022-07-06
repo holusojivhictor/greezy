@@ -26,6 +26,28 @@ class Assets {
     }
   }
 
+  static String translateAutoThemeModeType(AutoThemeModeType type) {
+    switch (type) {
+      case AutoThemeModeType.on:
+        return 'Follow OS setting';
+      case AutoThemeModeType.off:
+        return 'Off';
+      default:
+        throw Exception('Invalid auto theme mode type = $type');
+    }
+  }
+
+  static AppThemeType translateThemeTypeBool(bool value) {
+    switch (value) {
+      case false:
+        return AppThemeType.light;
+      case true:
+        return AppThemeType.dark;
+      default:
+        throw Exception('Unknown error occurred');
+    }
+  }
+
   static String translateMenuMealType(MenuMealType type) {
     switch (type) {
       case MenuMealType.breakfast:
