@@ -1,32 +1,9 @@
 {
   "menu": [
     {
-      "id": 0,
-      "title": "Crisp Tacos Picadillo",
-      "price": 39.1,
-      "description": "Description",
-      "cuisineType": "mexican",
-      "image": "32da8c201c42d8aae7a7f51449c83e2a-l.jpg",
-      "rating": {
-        "rate": 4.6,
-        "count": 245
-      },
-      "healthLabels": [
-        "Egg-Free",
-        "Peanut-Free",
-        "Tree-Nut-Free"
-      ],
-      "mealType": [
-        "lunch/dinner"
-      ],
-      "dishType": [
-        "sandwiches"
-      ]
-    },
-    {
       "id": 13,
       "title": "Chorizo and Potato Tacos with Avocado Salsa Verde",
-      "price": 25.7,
+      "price": 17.91,
       "description": "Description",
       "cuisineType": "mexican",
       "image": "2115ff1e77dcf4dd65034b1adb9443a8-l.jpg",
@@ -49,7 +26,7 @@
     {
       "id": 26,
       "title": "Chicken Piccata",
-      "price": 29.8,
+      "price": 17.86,
       "description": "Description",
       "cuisineType": "italian",
       "image": "32929aa51f7300bc105b46e6ea32ba41-l.jpg",
@@ -72,7 +49,7 @@
     {
       "id": 39,
       "title": "Italian Turkey Burger",
-      "price": 40.3,
+      "price": 5.02,
       "description": "Description",
       "cuisineType": "italian",
       "image": "193da5a200999d38b305986887d880e7-l.jpg",
@@ -95,7 +72,7 @@
     {
       "id": 52,
       "title": "Steak & Chips Salad",
-      "price": 48.9,
+      "price": 17.33,
       "description": "Description",
       "cuisineType": "american",
       "image": "72ebeef4f13b029165ce5fc4a675130e-l.jpg",
@@ -118,7 +95,7 @@
     {
       "id": 65,
       "title": "Citrus-Avocado Salad",
-      "price": 58.2,
+      "price": 9.18,
       "description": "Description",
       "cuisineType": "caribbean",
       "image": "1546fef87cf2da994d31ced8eb064d31-l.jpg",
@@ -141,7 +118,7 @@
     {
       "id": 78,
       "title": "Pizza Margherita",
-      "price": 50.5,
+      "price": 10.51,
       "description": "Description",
       "cuisineType": "italian",
       "image": "08a7002b167ffad2ad2c675be162c170-l.jpg",
@@ -164,7 +141,7 @@
     {
       "id": 91,
       "title": "Guacamole Pasta",
-      "price": 68.3,
+      "price": 15.9,
       "description": "Description",
       "cuisineType": "american",
       "image": "c3b2202bcd51fcb362abf83a683ac758-l.JPG",
@@ -187,7 +164,7 @@
     {
       "id": 104,
       "title": "Creamy Chicken Pasta Salad",
-      "price": 65.8,
+      "price": 19.1,
       "description": "Description",
       "cuisineType": "italian",
       "image": "c433cf5c26b366a7341ecae26a862af1-l.jpg",
@@ -210,7 +187,7 @@
     {
       "id": 117,
       "title": "Lucques' Grilled Cheese Sandwich",
-      "price": 35.4,
+      "price": 9.64,
       "description": "Description",
       "cuisineType": "american",
       "image": "726ec42e0407e5a16b08770fcd5f0c7c-l.jpg",
@@ -233,7 +210,7 @@
     {
       "id": 130,
       "title": "Sausage Heros",
-      "price": 52.4,
+      "price": 12.89,
       "description": "Description",
       "cuisineType": "central europe",
       "image": "8f79e208a02cb367c1858e215db20693-l.jpg",
@@ -256,7 +233,7 @@
     {
       "id": 143,
       "title": "Cream Cheese Noodle Kugel",
-      "price": 61.9,
+      "price": 9.79,
       "description": "Description",
       "cuisineType": "asian",
       "image": "3bfcc3d99efce50afeb5aa527c592b39-l.jpg",
@@ -279,7 +256,7 @@
     {
       "id": 156,
       "title": "Beef Noodle Soup",
-      "price": 61.1,
+      "price": 14.81,
       "description": "Description",
       "cuisineType": "asian",
       "image": "855b4d68b6159a0e374870d041d49edf-l.jpg",
@@ -302,7 +279,7 @@
     {
       "id": 169,
       "title": "Mushroom Risotto",
-      "price": 35.2,
+      "price": 15.48,
       "description": "Description",
       "cuisineType": "italian",
       "image": "0ffde9357b721922f7407cf2933f08d8-l.jpg",
@@ -325,7 +302,7 @@
     {
       "id": 182,
       "title": "Fried Rice With Ham",
-      "price": 42.8,
+      "price": 19.28,
       "description": "Description",
       "cuisineType": "chinese",
       "image": "90d6122d6707c888358692227a511b72-l.jpg",
@@ -348,7 +325,7 @@
     {
       "id": 195,
       "title": "Turkey Tacos",
-      "price": 53.1,
+      "price": 9.77,
       "description": "Description",
       "cuisineType": "mexican",
       "image": "47634272554bf91e92f94ce53d505f00-l.jpg",
@@ -371,7 +348,7 @@
     {
       "id": 208,
       "title": "Green chilli con carne tacos",
-      "price": 39.9,
+      "price": 11.97,
       "description": "Description",
       "cuisineType": "mexican",
       "image": "08eaa1faf40c29e1e2810ae99d826cd5-l.jpg",
@@ -394,7 +371,7 @@
     {
       "id": 221,
       "title": "Chicken Tortellini Soup",
-      "price": 49.7,
+      "price": 18.16,
       "description": "Description",
       "cuisineType": "italian",
       "image": "2dd6c205dcf0b8a76d9fb8cdfae55471-l.jpg",
@@ -418,7 +395,7 @@
     {
       "id": 234,
       "title": "Bistro Beet Burgers Recipe",
-      "price": 23.1,
+      "price": 9.84,
       "description": "Description",
       "cuisineType": "nordic",
       "image": "56e2f5d0a015bd84d470904bf19f4641-l.jpg",
@@ -441,7 +418,7 @@
     {
       "id": 247,
       "title": "Garlic Lover's Burger",
-      "price": 69.1,
+      "price": 15.17,
       "description": "Description",
       "cuisineType": "nordic",
       "image": "138bf67c0afe45724b612f170ebe9233-l.jpg",
@@ -464,7 +441,7 @@
     {
       "id": 260,
       "title": "Turkey-Orange Salad",
-      "price": 65.5,
+      "price": 8.46,
       "description": "Description",
       "cuisineType": "american",
       "image": "960dcb6155b726b4ad803931a608ae6a-l.jpg",
@@ -487,7 +464,7 @@
     {
       "id": 273,
       "title": "Pepperoni Pizza Cake",
-      "price": 45.2,
+      "price": 16.3,
       "description": "Description",
       "cuisineType": "italian",
       "image": "19da59c9bc2cd22835ce26ff5b1cfa3a-l.jpg",
@@ -512,7 +489,7 @@
     {
       "id": 286,
       "title": "Saut\u00e9ed Swiss Chard Ribs With Cream And Pasta",
-      "price": 38.0,
+      "price": 10.73,
       "description": "Description",
       "cuisineType": "italian",
       "image": "6de966a935da2371c0ec7d1b1b7c2832-l.jpg",
@@ -535,7 +512,7 @@
     {
       "id": 299,
       "title": "Asparagus and Shrimp with Penne Pasta",
-      "price": 37.1,
+      "price": 15.9,
       "description": "Description",
       "cuisineType": "italian",
       "image": "039b0ac4913d55f6d1e2c58b49dc5189-l.jpg",
@@ -558,7 +535,7 @@
     {
       "id": 312,
       "title": "Pulled Turkey Sandwich with Apple-Cabbage Slaw",
-      "price": 56.6,
+      "price": 8.64,
       "description": "Description",
       "cuisineType": "american",
       "image": "df301508ffe1a33fd8b8a8bc935686df-l.jpg",
@@ -581,7 +558,7 @@
     {
       "id": 325,
       "title": "Sausage And Artichoke Pizzas",
-      "price": 33.6,
+      "price": 17.39,
       "description": "Description",
       "cuisineType": "italian",
       "image": "ead94ff0ba85f463bf41f53ad225ece9-l.jpg",
@@ -604,7 +581,7 @@
     {
       "id": 338,
       "title": "Chicken and Sausage Jambalaya",
-      "price": 68.2,
+      "price": 16.32,
       "description": "Description",
       "cuisineType": "american",
       "image": "58e046760a887070865ba8287e15bb5f-l.jpg",
@@ -627,7 +604,7 @@
     {
       "id": 351,
       "title": "Vietnamese Noodle Soup",
-      "price": 65.8,
+      "price": 9.34,
       "description": "Description",
       "cuisineType": "south east asian",
       "image": "692693f88665ac53ca6068168e90b701-l.jpg",
@@ -650,7 +627,7 @@
     {
       "id": 364,
       "title": "Prawn, Artichoke And Lemon Baked Risotto",
-      "price": 58.2,
+      "price": 18.23,
       "description": "Description",
       "cuisineType": "italian",
       "image": "d5a161a358eda789881d3d55bfaf9082-l.jpg",

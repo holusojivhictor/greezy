@@ -5,6 +5,8 @@ import 'models/models.dart';
 const kPadding = 10.0;
 const kAnimationDuration = Duration(milliseconds: 200);
 
+const digitalOceanUrl = 'https://greezy.sfo3.digitaloceanspaces.com/menu';
+
 class Data {
   static List<SplashData> splashData = [
     SplashData(
@@ -29,6 +31,7 @@ class Data {
 const languagesMap = {
   AppLanguageType.english: LanguageModel('en', 'US'),
 };
+
 /// Validator strings
 final RegExp emailValidatorRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 final RegExp phoneNumberValidatorRegExp = RegExp(r"^[0-9]");

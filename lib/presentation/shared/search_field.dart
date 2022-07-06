@@ -62,7 +62,7 @@ class _SearchFieldState extends State<SearchField> {
                 decoration: const InputDecoration(
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none,
-                  hintText: "Search Product",
+                  hintText: "Search Meal",
                   prefixIcon: Icon(Icons.search, color: Colors.black54),
                   contentPadding: EdgeInsets.symmetric(
                     horizontal: 10,

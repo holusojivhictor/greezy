@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:greezy/presentation/home/widgets/sliver_featured_menu.dart';
+import 'package:greezy/presentation/home/widgets/sliver_popular_menu.dart';
 import 'package:greezy/presentation/home/widgets/sliver_search_bar.dart';
+import 'package:greezy/presentation/shared/clickable_title.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'widgets/sliver_home_greet.dart';
@@ -19,11 +22,15 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
   Widget build(BuildContext context) {
     super.build(context);
     return ResponsiveBuilder(
-      builder: (ctx, size) => Scaffold(
+      builder: (ctx, size) => const Scaffold(
         body: CustomScrollView(
           slivers: [
             SliverHomeGreet(),
             SliverSearchBar(),
+            SliverClickableTitle(title: "Featured meals"),
+            SliverFeaturedMenu(),
+            SliverClickableTitle(title: "Popular meals"),
+            SliverPopularMenu(),
           ],
         ),
       ),

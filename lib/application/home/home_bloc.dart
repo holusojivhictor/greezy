@@ -27,16 +27,16 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
     if (!isLoaded) {
       return HomeState.loaded(
-        featuredProducts: featuredData,
-        popularProducts: popularData,
+        featuredMenu: featuredData,
+        popularMenu: popularData,
         timeParsed: timeParsed,
         displayName: displayName,
       );
     }
 
     final s = currentState.copyWith.call(
-      featuredProducts: featuredData,
-      popularProducts: popularData,
+      featuredMenu: featuredData,
+      popularMenu: popularData,
       timeParsed: timeParsed,
       displayName: displayName,
     );
