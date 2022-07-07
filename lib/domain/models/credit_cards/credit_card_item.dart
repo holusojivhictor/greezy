@@ -9,7 +9,6 @@ class CreditCardItem with _$CreditCardItem {
 
   factory CreditCardItem({
     required int key,
-    required String itemKey,
     required String cardNumber,
     required String cardExpiryDate,
     required String cardHolderName,

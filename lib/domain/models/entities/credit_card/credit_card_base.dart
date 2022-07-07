@@ -1,6 +1,4 @@
 abstract class CreditCardBase {
-  String get itemKey;
-
   DateTime get createdAt;
 
   String get cardNumber;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greezy/domain/app_constants.dart';
-import 'package:greezy/presentation/payment/widgets/cards_page.dart';
+import 'package:greezy/presentation/payment/widgets/credit_cards_page.dart';
 import 'package:greezy/presentation/shared/dialogs/info_dialog.dart';
 
 class PaymentPage extends StatelessWidget {

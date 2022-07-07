@@ -30,7 +30,6 @@ abstract class DataService {
   CreditCardItem getCreditCard(int key);
 
   Future<CreditCardItem> saveCreditCard(
-    String itemKey,
     String cardNumber,
     String cardExpiryDate,
     String cardHolderName,
@@ -42,5 +41,5 @@ abstract class DataService {
 
   Future<void> deleteCreditCard(int key);
 
-  Future<CreditCardItem> updateCreditCard(String key, String itemKey, double usedCredit);
+  Future<CreditCardItem> updateCreditCard(int key, double usedCredit);
 }

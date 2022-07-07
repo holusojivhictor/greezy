@@ -132,7 +132,6 @@ class DataServiceImpl implements DataService {
 
   @override
   Future<CreditCardItem> saveCreditCard(
-    String itemKey,
     String cardNumber,
     String cardExpiryDate,
     String cardHolderName,
@@ -143,7 +142,6 @@ class DataServiceImpl implements DataService {
   }) async {
     final now = DateTime.now();
     final creditCard = CreditCardHiveItem(
-      itemKey: itemKey,
       createdAt: now,
       cardNumber: cardNumber.trim(),
       cardExpiryDate: cardExpiryDate.trim(),
@@ -163,10 +161,9 @@ class DataServiceImpl implements DataService {
   }
 
   @override
-  Future<CreditCardItem> updateCreditCard(String key, String itemKey, double usedCredit) async {
+  Future<CreditCardItem> updateCreditCard(int key, double usedCredit) async {
     final item = _creditCardsBox.values.firstWhere((el) => el.key == key);
 
-    item.itemKey = itemKey;
     return _updateCreditCard(item, usedCredit);
   }
 
@@ -187,7 +184,6 @@ class DataServiceImpl implements DataService {
     final hiveObject = e as HiveObject;
     return CreditCardItem(
       key: hiveObject.key as int,
-      itemKey: e.itemKey,
       createdAt: e.createdAt,
       cardNumber: e.cardNumber,
       cardExpiryDate: e.cardExpiryDate,

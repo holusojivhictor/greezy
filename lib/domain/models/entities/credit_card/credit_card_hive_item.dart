@@ -7,42 +7,37 @@ part 'credit_card_hive_item.g.dart';
 class CreditCardHiveItem extends HiveObject implements CreditCardBase {
   @override
   @HiveField(0)
-  String itemKey;
-
-  @override
-  @HiveField(1)
   final DateTime createdAt;
 
   @override
-  @HiveField(2)
+  @HiveField(1)
   String cardNumber;
 
   @override
-  @HiveField(3)
+  @HiveField(2)
   String cardExpiryDate;
 
   @override
-  @HiveField(4)
+  @HiveField(3)
   String cardHolderName;
 
   @override
-  @HiveField(5)
+  @HiveField(4)
   String bankName;
 
   @override
-  @HiveField(6)
+  @HiveField(5)
   int cardType;
 
   @override
-  @HiveField(7)
+  @HiveField(6)
   double startBalance;
 
   @override
-  @HiveField(8)
+  @HiveField(7)
   double usedCredit;
 
   CreditCardHiveItem({
-    required this.itemKey,
     required this.createdAt,
     required this.cardNumber,
     required this.cardExpiryDate,
