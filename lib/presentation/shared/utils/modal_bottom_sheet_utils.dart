@@ -13,6 +13,9 @@ class ModalBottomSheetUtils {
         break;
       case EndDrawerItemType.menu:
         return const menu.MenuBottomSheet();
+      case EndDrawerItemType.creditCard:
+        // TODO: Handle this case.
+        break;
     }
     return Container();
   }

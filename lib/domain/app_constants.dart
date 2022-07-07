@@ -48,3 +48,7 @@ const String kShortPassError = "Password should be longer than 8 characters.";
 const String kConfirmPassNullError = "Please confirm your password.";
 
 const String constantDescription = "This meal was prepared top quality ingredients in order to provide you our customer, with the best dining experience. Click on order to process your purchase.";
+
+const infoA = "You can add new credit cards that help you process purchases.";
+const infoB = "You cannot make edits to already created cards.";
+const infoC = "You can delete a card by sliding it off the tile";

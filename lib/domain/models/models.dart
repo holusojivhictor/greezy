@@ -9,3 +9,5 @@ export 'db/menu/menu_file.dart';
 export 'menu/menu_card_model.dart';
 export 'user_profile/user_model.dart';
 export 'entities/inventory/inventory_item.dart';
+export 'credit_cards/credit_card_item.dart';
+export 'entities/credit_card/credit_card_hive_item.dart';

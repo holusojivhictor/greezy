@@ -12,7 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
   animated_text_kit: ^4.2.2
+  awesome_card: ^1.1.7
   cached_network_image: ^3.2.1
+  darq: ^1.2.1
   devicelocale: ^0.5.2
   device_info_plus: ^4.0.0
   dio: ^4.0.6

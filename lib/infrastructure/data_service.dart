@@ -2,8 +2,11 @@
 
 import 'dart:async';
 
+import 'package:awesome_card/awesome_card.dart';
 import 'package:collection/collection.dart' show IterableExtension;
+import 'package:darq/darq.dart';
 import 'package:greezy/domain/enums/enums.dart';
+import 'package:greezy/domain/models/entities/credit_card/credit_card_base.dart';
 import 'package:greezy/domain/models/models.dart';
 import 'package:greezy/domain/services/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -13,6 +16,8 @@ class DataServiceImpl implements DataService {
   final GreezyService _greezyService;
 
   late Box<InventoryItem> _inventoryBox;
+
+  late Box<CreditCardHiveItem> _creditCardsBox;
 
   final _initLock = Lock();
   final _deleteAllLock = Lock();
@@ -31,6 +36,7 @@ class DataServiceImpl implements DataService {
       await Hive.initFlutter(dir);
       _registerAdapters();
       _inventoryBox = await Hive.openBox<InventoryItem>('inventory');
+      _creditCardsBox = await Hive.openBox<CreditCardHiveItem>('creditCards');
     });
   }
 
@@ -38,6 +44,7 @@ class DataServiceImpl implements DataService {
   Future<void> deleteThemAll() async {
     await _deleteAllLock.synchronized(() async {
       await _inventoryBox.clear();
+      await _creditCardsBox.clear();
     });
   }
 
@@ -111,7 +118,97 @@ class DataServiceImpl implements DataService {
     return _inventoryBox.values.any((el) => el.itemKey == key && el.type == type.index);
   }
 
+  @override
+  List<CreditCardItem> getAllCreditCards() {
+    final creditCards = _creditCardsBox.values.map((e) => _mapToCreditCardItem(e)).toList();
+    return creditCards.orderBy((el) => el.createdAt).toList();
+  }
+
+  @override
+  CreditCardItem getCreditCard(int key) {
+    final item = _getCreditCard(key);
+    return _mapToCreditCardItem(item);
+  }
+
+  @override
+  Future<CreditCardItem> saveCreditCard(
+    String itemKey,
+    String cardNumber,
+    String cardExpiryDate,
+    String cardHolderName,
+    String bankName,
+    CardType cardType,
+    double startBalance, {
+    double usedCredit = 0,
+  }) async {
+    final now = DateTime.now();
+    final creditCard = CreditCardHiveItem(
+      itemKey: itemKey,
+      createdAt: now,
+      cardNumber: cardNumber.trim(),
+      cardExpiryDate: cardExpiryDate.trim(),
+      cardHolderName: cardHolderName.trim(),
+      bankName: bankName.trim(),
+      cardType: cardType.index,
+      startBalance: startBalance,
+      usedCredit: usedCredit,
+    );
+    final key = await _creditCardsBox.add(creditCard);
+    return getCreditCard(key);
+  }
+
+  @override
+  Future<void> deleteCreditCard(int key) {
+    return _creditCardsBox.delete(key);
+  }
+
+  @override
+  Future<CreditCardItem> updateCreditCard(String key, String itemKey, double usedCredit) async {
+    final item = _creditCardsBox.values.firstWhere((el) => el.key == key);
+
+    item.itemKey = itemKey;
+    return _updateCreditCard(item, usedCredit);
+  }
+
+  T _getCreditCard<T extends CreditCardBase>(int key) {
+    return _creditCardsBox.values.firstWhere((el) => el.key == key) as T;
+  }
+
+  CreditCardItem _mapToCreditCardItem(CreditCardBase e) {
+    return _mapToCreditCardFromHiveItem(e as CreditCardHiveItem);
+  }
+
+  CreditCardItem _mapToCreditCardFromHiveItem(CreditCardHiveItem e) {
+    return _mapToCreditCardItemFromBase(e);
+  }
+
+  CreditCardItem _mapToCreditCardItemFromBase(CreditCardBase e) {
+    final cardType = CardType.values[e.cardType];
+    final hiveObject = e as HiveObject;
+    return CreditCardItem(
+      key: hiveObject.key as int,
+      itemKey: e.itemKey,
+      createdAt: e.createdAt,
+      cardNumber: e.cardNumber,
+      cardExpiryDate: e.cardExpiryDate,
+      cardHolderName: e.cardHolderName,
+      bankName: e.bankName,
+      cardType: cardType,
+      startBalance: e.startBalance,
+      usedCredit: e.usedCredit,
+    );
+  }
+
+  Future<CreditCardItem> _updateCreditCard(CreditCardBase creditCard, double usedCredit) async {
+    creditCard.usedCredit = creditCard.usedCredit + usedCredit;
+
+    final hiveObject = creditCard as HiveObject;
+    await hiveObject.save();
+    return getCreditCard(hiveObject.key as int);
+  }
+
   void _registerAdapters() {
     Hive.registerAdapter(InventoryItemAdapter());
+    Hive.registerAdapter(CreditCardHiveItemAdapter());
   }
 }
