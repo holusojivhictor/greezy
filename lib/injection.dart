@@ -6,10 +6,15 @@ import 'infrastructure/infrastructure.dart';
 final GetIt getIt = GetIt.instance;
 
 class Injection {
-  static MenuItemBloc get menuItemBloc{
+  static MenuItemBloc get menuItemBloc {
     final greezyService = getIt<GreezyService>();
     final dataService = getIt<DataService>();
     return MenuItemBloc(greezyService, dataService);
+  }
+
+  static CreditCardsBloc get creditCardsBloc {
+    final dataService = getIt<DataService>();
+    return CreditCardsBloc(dataService);
   }
 
   static Future<void> init() async {
