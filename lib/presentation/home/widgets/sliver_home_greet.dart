@@ -10,7 +10,7 @@ class SliverHomeGreet extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return SliverPadding(
-      padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 10),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 10),
       sliver: SliverToBoxAdapter(
         child: BlocBuilder<HomeBloc, HomeState>(
           builder: (ctx, state) => state.map(

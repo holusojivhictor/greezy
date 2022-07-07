@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
+import 'package:greezy/domain/enums/enums.dart';
 import 'package:greezy/domain/models/models.dart';
 import 'package:greezy/presentation/shared/loading.dart';
 import 'package:greezy/presentation/shared/search_field.dart';
 import 'package:greezy/presentation/shared/sliver_nothing_found.dart';
 import 'package:greezy/presentation/shared/sliver_scaffold_with_fab.dart';
+import 'package:greezy/presentation/shared/utils/modal_bottom_sheet_utils.dart';
 import 'package:greezy/presentation/shared/utils/size_utils.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';
 
@@ -46,11 +48,33 @@ class _MenuPageState extends State<MenuPage> with AutomaticKeepAliveClientMixin<
         loaded: (state) => SliverScaffoldWithFab(
           appbar: widget.isInSelectionMode ? AppBar(title: const Text('Select a meal')) : null,
           slivers: [
-            SliverToBoxAdapter(
-              child: SearchField(
-                value: state.search,
-                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-                searchChanged: (v) => context.read<MenuBloc>().add(MenuEvent.searchChanged(search: v)),
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+              sliver: SliverToBoxAdapter(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SearchField(
+                      isMenu: true,
+                      value: state.search,
+                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                      searchChanged: (v) => context.read<MenuBloc>().add(MenuEvent.searchChanged(search: v)),
+                    ),
+                    InkWell(
+                      onTap: () => ModalBottomSheetUtils.showAppModalBottomSheet(context, EndDrawerItemType.menu),
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Icon(Icons.filter_alt_outlined, size: 20, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             if (state.menu.isNotEmpty) _buildGrid(context, state.menu) else const SliverNothingFound(),

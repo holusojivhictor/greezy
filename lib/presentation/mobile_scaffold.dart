@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
 import 'package:greezy/presentation/home/home_page.dart';
 import 'package:greezy/presentation/menu/menu_page.dart';
+import 'package:greezy/presentation/payment/payment_page.dart';
 import 'package:greezy/presentation/settings/settings_page.dart';
 import 'package:greezy/presentation/shared/extensions/focus_scope_node_extensions.dart';
 
@@ -43,11 +44,11 @@ class _MobileScaffoldState extends State<MobileScaffold> {
           child: TabBarView(
             controller: widget.tabController,
             physics: const NeverScrollableScrollPhysics(),
-            children: [
-              const HomePage(),
-              const MenuPage(),
-              Container(),
-              const SettingsPage(),
+            children: const [
+              HomePage(),
+              MenuPage(),
+              PaymentPage(),
+              SettingsPage(),
             ],
           ),
         ),
@@ -58,8 +59,8 @@ class _MobileScaffoldState extends State<MobileScaffold> {
         showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.shopping_bag_outlined), activeIcon: Icon(Icons.shopping_bag)),
-          BottomNavigationBarItem(label: 'Shop', icon: Icon(Icons.shopify_outlined), activeIcon: Icon(Icons.shopify)),
-          BottomNavigationBarItem(label: 'History', icon: Icon(Icons.bubble_chart_outlined), activeIcon: Icon(Icons.bubble_chart)),
+          BottomNavigationBarItem(label: 'Menu', icon: Icon(Icons.fastfood_outlined), activeIcon: Icon(Icons.fastfood)),
+          BottomNavigationBarItem(label: 'Payment', icon: Icon(Icons.bubble_chart_outlined), activeIcon: Icon(Icons.bubble_chart)),
           BottomNavigationBarItem(label: 'Settings', icon: Icon(Icons.settings_outlined), activeIcon: Icon(Icons.settings)),
         ],
         type: BottomNavigationBarType.fixed,

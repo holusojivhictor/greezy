@@ -47,6 +47,30 @@ class Assets {
     }
   }
 
+  static String translateMenuFilterType(MenuFilterType type) {
+    switch (type) {
+      case MenuFilterType.name:
+        return "Name";
+      case MenuFilterType.price:
+        return "Price";
+      case MenuFilterType.rating:
+        return "Rating";
+      default:
+        throw Exception('Invalid menu filter type = $type');
+    }
+  }
+
+  static String translateSortDirectionType(SortDirectionType type) {
+    switch (type) {
+      case SortDirectionType.asc:
+        return 'Ascending';
+      case SortDirectionType.desc:
+        return 'Descending';
+      default:
+        throw Exception('Invalid sort direction type = $type');
+    }
+  }
+
   static String translateMenuMealType(MenuMealType type) {
     switch (type) {
       case MenuMealType.breakfast:

@@ -650,30 +650,6 @@
       "dishType": [
         "soup"
       ]
-    },
-    {
-      "id": 364,
-      "title": "Prawn, Artichoke And Lemon Baked Risotto",
-      "price": 18.23,
-      "description": "Description",
-      "cuisineType": "italian",
-      "image": "d5a161a358eda789881d3d55bfaf9082-l.jpg",
-      "rating": {
-        "rate": 4.1,
-        "count": 149
-      },
-      "healthLabels": [
-        "Gluten-Free",
-        "Wheat-Free",
-        "Egg-Free"
-      ],
-      "mealType": [
-        "lunch",
-        "dinner"
-      ],
-      "dishType": [
-        "main course"
-      ]
     }
   ]
 }

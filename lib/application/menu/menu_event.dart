@@ -10,6 +10,8 @@ class MenuEvent with _$MenuEvent {
     required String search,
   }) = _SearchChanged;
 
+  const factory MenuEvent.menuMealTypeChanged(MenuMealType? mealType) = _MenuMealTypeChanged;
+
   const factory MenuEvent.menuFilterTypeChanged(MenuFilterType filterType) = _MenuFilterTypeChanged;
 
   const factory MenuEvent.applyFilterChanges() = _ApplyFilterChanges;

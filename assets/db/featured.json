@@ -405,30 +405,6 @@
       ]
     },
     {
-      "id": 198,
-      "title": "Jennifer Hudson's Yummy Tacos For Two",
-      "price": 9.13,
-      "description": "Description",
-      "cuisineType": "american",
-      "image": "b557cb2300dc680ce5bfdafbc57542d3-l.jpg",
-      "rating": {
-        "rate": 4.1,
-        "count": 98
-      },
-      "healthLabels": [
-        "Sugar-Conscious",
-        "Kidney-Friendly",
-        "Egg-Free"
-      ],
-      "mealType": [
-        "lunch",
-        "dinner"
-      ],
-      "dishType": [
-        "sandwiches"
-      ]
-    },
-    {
       "id": 209,
       "title": "Shrimp Tacos With Fresh Pineapple Salsa",
       "price": 19.39,

@@ -1,3 +1,4 @@
 enum EndDrawerItemType {
+  menu,
   order,
 }

@@ -8,6 +8,7 @@ class SearchField extends StatefulWidget {
   final bool showClearButton;
   final SearchChanged searchChanged;
   final EdgeInsets padding;
+  final bool isMenu;
 
   const SearchField({
     Key? key,
@@ -15,6 +16,7 @@ class SearchField extends StatefulWidget {
     required this.searchChanged,
     this.showClearButton = true,
     this.padding = EdgeInsets.zero,
+    this.isMenu = false,
   }) : super(key: key);
 
   @override
@@ -44,8 +46,7 @@ class _SearchFieldState extends State<SearchField> {
     final theme = Theme.of(context);
     final screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      padding: widget.padding,
-      constraints: BoxConstraints(maxWidth: screenWidth * 0.78),
+      constraints: BoxConstraints(maxWidth: widget.isMenu ? screenWidth * 0.82 : screenWidth * 0.79),
       child: Card(
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

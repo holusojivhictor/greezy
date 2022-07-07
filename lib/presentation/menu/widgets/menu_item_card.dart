@@ -7,6 +7,7 @@ import 'package:greezy/presentation/shared/container_tag.dart';
 import 'package:greezy/presentation/shared/custom_card.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:greezy/presentation/shared/rating_overlay.dart';
+import 'package:greezy/presentation/shared/transparent_image.dart';
 import 'package:greezy/theme.dart';
 
 class MenuItemCard extends StatelessWidget {
@@ -96,9 +97,10 @@ class MenuItemCard extends StatelessWidget {
                 alignment: AlignmentDirectional.topCenter,
                 fit: StackFit.passthrough,
                 children: [
-                  Image(
+                  FadeInImage(
                     width: width,
-                    filterQuality: FilterQuality.high,
+                    fadeInDuration: const Duration(milliseconds: 50),
+                    placeholder: MemoryImage(kTransparentImage),
                     image: CachedNetworkImageProvider(Assets.getImageCloudPath(image)),
                   ),
                   Row(

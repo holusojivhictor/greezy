@@ -7,6 +7,8 @@ class MenuState with _$MenuState {
   const factory MenuState.loaded({
     required List<MenuCardModel> menu,
     String? search,
+    MenuMealType? mealType,
+    MenuMealType? tempMealType,
     required MenuFilterType menuFilterType,
     required MenuFilterType tempMenuFilterType,
     required SortDirectionType sortDirectionType,

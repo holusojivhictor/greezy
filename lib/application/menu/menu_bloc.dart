@@ -18,6 +18,7 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
   MenuBloc(this._greezyService) : super(const MenuState.loading()) {
     on<_Init>(_mapInitToState);
     on<_SearchChanged>(_mapSearchChangedToState);
+    on<_MenuMealTypeChanged>(_mapMealTypeChangedToState);
     on<_MenuFilterTypeChanged>(_mapFilterTypeChangedToState);
     on<_ApplyFilterChanges>(_mapApplyFilterChangesToState);
     on<_SortDirectionTypeChanged>(_mapSortDirectionChangedToState);
@@ -28,7 +29,8 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
   MenuState _buildInitialState({
     String? search,
     List<int> excludeKeys = const [],
-    MenuFilterType menuFilterType = MenuFilterType.name,
+    MenuMealType? mealType,
+    MenuFilterType menuFilterType = MenuFilterType.rating,
     SortDirectionType sortDirectionType = SortDirectionType.asc,
   }) {
     final isLoaded = state is _LoadedState;
@@ -42,6 +44,8 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
       return MenuState.loaded(
         menu: data,
         search: search,
+        mealType: mealType,
+        tempMealType: mealType,
         menuFilterType: menuFilterType,
         tempMenuFilterType: menuFilterType,
         sortDirectionType: sortDirectionType,
@@ -54,11 +58,36 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
       data = data.where((el) => el.title.toLowerCase().contains(search.toLowerCase())).toList();
     }
 
+    switch (mealType) {
+      case MenuMealType.breakfast:
+        data = data.where((el) => el.mealType.contains(MenuMealType.breakfast)).toList();
+        break;
+      case MenuMealType.brunch:
+        data = data.where((el) => el.mealType.contains(MenuMealType.brunch)).toList();
+        break;
+      case MenuMealType.lunch:
+        data = data.where((el) => el.mealType.contains(MenuMealType.lunch)).toList();
+        break;
+      case MenuMealType.dinner:
+        data = data.where((el) => el.mealType.contains(MenuMealType.dinner)).toList();
+        break;
+      case MenuMealType.snack:
+        data = data.where((el) => el.mealType.contains(MenuMealType.snack)).toList();
+        break;
+      case MenuMealType.teatime:
+        data = data.where((el) => el.mealType.contains(MenuMealType.teatime)).toList();
+        break;
+      default:
+        break;
+    }
+
     _sortData(data, menuFilterType, sortDirectionType);
 
     final s = currentState.copyWith.call(
       menu: data,
       search: search,
+      mealType: mealType,
+      tempMealType: mealType,
       menuFilterType: menuFilterType,
       tempMenuFilterType: menuFilterType,
       sortDirectionType: sortDirectionType,
@@ -105,10 +134,16 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
   void _mapSearchChangedToState(_SearchChanged event, Emitter<MenuState> emit) {
     final state = _buildInitialState(
       search: event.search,
+      mealType: currentState.mealType,
       menuFilterType: currentState.menuFilterType,
       sortDirectionType: currentState.sortDirectionType,
       excludeKeys: currentState.excludeKeys,
     );
+    emit(state);
+  }
+
+  void _mapMealTypeChangedToState(_MenuMealTypeChanged event, Emitter<MenuState> emit) {
+    final state = currentState.copyWith.call(tempMealType: event.mealType);
     emit(state);
   }
 
@@ -120,6 +155,7 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
   void _mapApplyFilterChangesToState(_ApplyFilterChanges event, Emitter<MenuState> emit) {
     final state = _buildInitialState(
       search: currentState.search,
+      mealType: currentState.tempMealType,
       menuFilterType: currentState.tempMenuFilterType,
       sortDirectionType: currentState.tempSortDirectionType,
       excludeKeys: currentState.excludeKeys,
@@ -135,6 +171,7 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
 
   void _mapCancelChangesToState(_CancelChanges event, Emitter<MenuState> emit) {
     final state = currentState.copyWith.call(
+      tempMealType: currentState.mealType,
       tempMenuFilterType: currentState.menuFilterType,
       tempSortDirectionType: currentState.sortDirectionType,
       excludeKeys: currentState.excludeKeys,

@@ -8,6 +8,7 @@ import 'package:greezy/presentation/shared/container_tag.dart';
 import 'package:greezy/presentation/shared/custom_card.dart';
 import 'package:greezy/presentation/shared/price_overlay.dart';
 import 'package:greezy/presentation/shared/rating_overlay.dart';
+import 'package:greezy/presentation/shared/transparent_image.dart';
 import 'package:greezy/theme.dart';
 
 class FeaturedCard extends StatelessWidget {
@@ -80,11 +81,12 @@ class FeaturedCard extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image(
+                      child: FadeInImage(
                         width: imgWidth,
                         height: imgHeight,
                         fit: BoxFit.cover,
-                        filterQuality: FilterQuality.high,
+                        fadeInDuration: const Duration(milliseconds: 100),
+                        placeholder: MemoryImage(kTransparentImage),
                         image: CachedNetworkImageProvider(Assets.getImageCloudPath(image)),
                       ),
                     ),

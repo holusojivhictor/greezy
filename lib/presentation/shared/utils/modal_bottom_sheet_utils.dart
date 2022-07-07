@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greezy/domain/enums/enums.dart';
+import 'package:greezy/presentation/menu/widgets/menu_bottom_sheet.dart' as menu;
 import 'package:greezy/presentation/shared/bottom_sheets/custom_bottom_sheet.dart';
 import 'package:greezy/theme.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -10,6 +11,8 @@ class ModalBottomSheetUtils {
       case EndDrawerItemType.order:
         // TODO: Handle this case.
         break;
+      case EndDrawerItemType.menu:
+        return const menu.MenuBottomSheet();
     }
     return Container();
   }
