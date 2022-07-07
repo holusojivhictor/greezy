@@ -4,3 +4,4 @@ export 'settings_service.dart';
 export 'logging_service.dart';
 export 'greezy_service.dart';
 export 'data_service.dart';
+export 'firebase_data_service.dart';

@@ -32,5 +32,8 @@ class Injection {
     final dataService = DataServiceImpl(getIt<GreezyService>());
     await dataService.init();
     getIt.registerSingleton<DataService>(dataService);
+
+    final firebaseDataService = FirebaseDataServiceImpl();
+    getIt.registerSingleton<FirebaseDataService>(firebaseDataService);
   }
 }

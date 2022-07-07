@@ -7,3 +7,4 @@ export 'menu_meal_type.dart';
 export 'menu_filter_type.dart';
 export 'sort_direction_type.dart';
 export 'item_type.dart';
+export 'end_drawer_item_type.dart';

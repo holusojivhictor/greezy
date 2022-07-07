@@ -52,6 +52,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '310154729657',
     projectId: 'greezy-3bfb5',
     authDomain: 'greezy-3bfb5.firebaseapp.com',
+    databaseURL: 'https://greezy-3bfb5-default-rtdb.firebaseio.com',
     storageBucket: 'greezy-3bfb5.appspot.com',
   );
 
@@ -60,6 +61,7 @@ class DefaultFirebaseOptions {
     appId: '1:310154729657:android:6eb6f9004479c653232368',
     messagingSenderId: '310154729657',
     projectId: 'greezy-3bfb5',
+    databaseURL: 'https://greezy-3bfb5-default-rtdb.firebaseio.com',
     storageBucket: 'greezy-3bfb5.appspot.com',
   );
 
@@ -68,6 +70,7 @@ class DefaultFirebaseOptions {
     appId: '1:310154729657:ios:7a9a0f92854324ab232368',
     messagingSenderId: '310154729657',
     projectId: 'greezy-3bfb5',
+    databaseURL: 'https://greezy-3bfb5-default-rtdb.firebaseio.com',
     storageBucket: 'greezy-3bfb5.appspot.com',
     androidClientId: '310154729657-e0tfbqnlebr4vmvcv7k9dqdhben1lbfh.apps.googleusercontent.com',
     iosClientId: '310154729657-l6e343jl8ulpih60crluf714q91b48fa.apps.googleusercontent.com',
