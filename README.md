@@ -2,6 +2,14 @@
 
 Restaurant inventory management system.
 
+## Getting Started
+
+Menu management system built with Flutter.
+
+<p align="center">
+  <img src="images/preview-image.png">
+</p>
+
 ### Run this project
 
 You can build and run the project by following these steps:
