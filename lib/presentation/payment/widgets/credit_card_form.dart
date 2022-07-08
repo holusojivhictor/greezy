@@ -3,6 +3,7 @@ import 'package:greezy/presentation/payment/widgets/credit_card_bank_name.dart';
 import 'package:greezy/presentation/payment/widgets/credit_card_expiry_code.dart';
 import 'package:greezy/presentation/payment/widgets/credit_card_holder_name.dart';
 import 'package:greezy/presentation/payment/widgets/credit_card_number.dart';
+import 'package:greezy/presentation/payment/widgets/credit_card_start_balance.dart';
 
 class CreditCardForm extends StatelessWidget {
   final bool isInEditMode;
@@ -11,6 +12,7 @@ class CreditCardForm extends StatelessWidget {
   final String bankName;
   final String expiryDate;
   final String securityCode;
+  final double startBalance;
 
   const CreditCardForm({
     Key? key,
@@ -20,6 +22,7 @@ class CreditCardForm extends StatelessWidget {
     required this.bankName,
     required this.expiryDate,
     required this.securityCode,
+    required this.startBalance,
   }) : super(key: key);
 
   @override
@@ -33,6 +36,7 @@ class CreditCardForm extends StatelessWidget {
         CreditCardExpiryCode(expiryDate: expiryDate, securityCode: securityCode),
         CreditCardHolderName(cardHolderName: cardHolderName),
         CreditCardBankName(bankName: bankName),
+        CreditCardStartBalance(startBalance: startBalance),
       ],
     );
   }

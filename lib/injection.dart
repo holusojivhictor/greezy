@@ -23,6 +23,11 @@ class Injection {
     return CreditCardBloc(dataService, loggingService, bloc);
   }
 
+  static InventoryBloc get inventoryBloc {
+    final dataService = getIt<DataService>();
+    return InventoryBloc(dataService);
+  }
+
   static Future<void> init() async {
     final authService = AuthServiceImpl();
     getIt.registerSingleton<AuthService>(authService);

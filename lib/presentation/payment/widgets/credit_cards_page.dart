@@ -42,7 +42,7 @@ class _CreditCardsPageState extends State<CreditCardsPage> with SingleTickerProv
             }
 
             return ListView.separated(
-              separatorBuilder: (ctx, index) => const SizedBox(width: 15),
+              separatorBuilder: (ctx, index) => const SizedBox(height: 15),
               itemCount: state.creditCards.length,
               itemBuilder: (ctx, index) {
                 final e = state.creditCards[index];

@@ -87,6 +87,7 @@ class _FormWidget extends StatelessWidget {
         bankName: state.bankName,
         expiryDate: state.cardExpiryDate,
         securityCode: state.cardSecurityCode,
+        startBalance: state.startBalance,
       ),
     );
   }

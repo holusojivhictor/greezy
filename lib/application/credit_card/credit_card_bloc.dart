@@ -99,7 +99,7 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
 
   Future<CreditCardState> _saveChanges() async {
     try {
-      _saveCreditCard;
+      _saveCreditCard(state as _CreditCardState);
     } catch (e, s) {
       _loggingService.error(runtimeType, '_saveChanges: Unknown error while saving changes', e, s);
     }

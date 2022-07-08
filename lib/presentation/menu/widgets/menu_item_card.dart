@@ -24,6 +24,7 @@ class MenuItemCard extends StatelessWidget {
   final bool isInSelectionMode;
   final bool withElevation;
   final bool isPopular;
+  final bool isFavorite;
 
   const MenuItemCard({
     Key? key,
@@ -39,6 +40,7 @@ class MenuItemCard extends StatelessWidget {
     this.isInSelectionMode = false,
     this.withElevation = true,
     this.isPopular = false,
+    this.isFavorite = false,
   }) : super(key: key);
 
   MenuItemCard.item({
@@ -50,6 +52,7 @@ class MenuItemCard extends StatelessWidget {
     this.isInSelectionMode = false,
     this.withElevation = true,
     this.isPopular = false,
+    this.isFavorite = false,
   })  : id = menuItem.id,
         title = menuItem.title,
         price = menuItem.price,
@@ -67,6 +70,25 @@ class MenuItemCard extends StatelessWidget {
     this.isInSelectionMode = false,
     this.withElevation = true,
     this.isPopular = true,
+    this.isFavorite = false,
+  })  : id = menuItem.id,
+        title = menuItem.title,
+        price = menuItem.price,
+        image = menuItem.image,
+        rating = menuItem.rating,
+        dishType = menuItem.dishType,
+        super(key: key);
+
+  MenuItemCard.favorite({
+    Key? key,
+    required MenuCardModel menuItem,
+    this.width = 160,
+    this.imgWidth = 160,
+    this.imgHeight = 160,
+    this.isInSelectionMode = false,
+    this.withElevation = true,
+    this.isPopular = false,
+    this.isFavorite = true,
   })  : id = menuItem.id,
         title = menuItem.title,
         price = menuItem.price,
@@ -122,7 +144,7 @@ class MenuItemCard extends StatelessWidget {
               const SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                height: isPopular ? 30 : null,
+                height: isPopular || isFavorite ? 30 : null,
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Tooltip(
@@ -164,6 +186,15 @@ class MenuItemCard extends StatelessWidget {
                         child: const RadialGradientMask(
                           child: Icon(Icons.local_fire_department_rounded, color: Colors.white),
                         ),
+                      ),
+                    if (isFavorite)
+                      Container(
+                        decoration: BoxDecoration(
+                          color: theme.colorScheme.secondary.withOpacity(0.1),
+                          shape: BoxShape.circle,
+                        ),
+                        padding: Styles.edgeInsetAll5,
+                        child: const Icon(Icons.favorite_rounded, color: Color(0xFFDD5E65)),
                       ),
                   ],
                 ),

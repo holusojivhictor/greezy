@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
+import 'package:greezy/presentation/inventory/inventory_page.dart';
 import 'package:greezy/presentation/shared/search_field.dart';
 
 class SliverSearchBar extends StatelessWidget {
@@ -27,7 +28,7 @@ class SliverSearchBar extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () => _goToInventoryPage(context),
               child: Container(
                 padding: const EdgeInsets.all(5),
                 height: 50,
@@ -36,12 +37,18 @@ class SliverSearchBar extends StatelessWidget {
                   color: theme.primaryColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.shopping_cart_outlined, size: 20, color: Colors.white),
+                child: const Icon(Icons.favorite_rounded, size: 20, color: Colors.white),
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> _goToInventoryPage(BuildContext context) async {
+    final route = MaterialPageRoute(builder: (c) => const InventoryPage());
+    await Navigator.push(context, route);
+    await route.completed;
   }
 }

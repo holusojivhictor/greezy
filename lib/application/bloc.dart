@@ -10,3 +10,4 @@ export 'menu/menu_bloc.dart';
 export 'menu_item/menu_item_bloc.dart';
 export 'credit_cards/credit_cards_bloc.dart';
 export 'credit_card/credit_card_bloc.dart';
+export 'inventory/inventory_bloc.dart';
