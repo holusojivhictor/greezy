@@ -10,6 +10,10 @@ Menu management system built with Flutter.
   <img src="images/preview-image.png">
 </p>
 
+<p align="center">
+  <img src="images/preview-image-alt.png">
+</p>
+
 ### Run this project
 
 You can build and run the project by following these steps:
