@@ -5,6 +5,7 @@ import 'package:greezy/application/bloc.dart';
 import 'package:greezy/injection.dart';
 import 'package:greezy/presentation/payment/widgets/credit_card_form.dart';
 import 'package:greezy/presentation/shared/bottom_sheets/common_bottom_sheet.dart';
+import 'package:greezy/presentation/shared/utils/toast_utils.dart';
 
 const _cardNumberKey = 'cardNumber';
 const _cardSecurityCodeKey = 'cardSecurityCode';
@@ -68,7 +69,9 @@ class AddCardBottomSheet extends StatelessWidget {
   }
 
   void _saveChanges(BuildContext context) {
+    final fToast = ToastUtils.of(context);
     context.read<CreditCardBloc>().add(const CreditCardEvent.saveChanges());
+    ToastUtils.showSucceedToast(fToast, 'Successfully created credit card!');
     Navigator.pop(context);
   }
 }

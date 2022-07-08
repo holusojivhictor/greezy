@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greezy/domain/enums/enums.dart';
 import 'package:greezy/presentation/menu/widgets/menu_bottom_sheet.dart' as menu;
+import 'package:greezy/presentation/menu_item/widgets/menu_item_bottom_sheet.dart' as menu_item;
 import 'package:greezy/presentation/payment/widgets/add_card_bottom_sheet.dart' as credit_cards;
 import 'package:greezy/presentation/shared/bottom_sheets/custom_bottom_sheet.dart';
 import 'package:greezy/theme.dart';
@@ -10,8 +11,7 @@ class ModalBottomSheetUtils {
   static Widget getBottomSheetFromEndDrawerItemType(BuildContext context, EndDrawerItemType? type, {Map<String, dynamic>? args}) {
     switch (type) {
       case EndDrawerItemType.order:
-        // TODO: Handle this case.
-        break;
+        return const menu_item.MenuItemBottomSheet();
       case EndDrawerItemType.menu:
         return const menu.MenuBottomSheet();
       case EndDrawerItemType.creditCard:

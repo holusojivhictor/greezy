@@ -16,6 +16,8 @@ class MenuItemBloc extends Bloc<MenuItemEvent, MenuItemState> {
     on<_LoadProductFromKey>(_mapLoadFromKeyToState);
     on<_AddToInventory>(_mapAddToInventoryToState);
     on<_DeleteFromInventory>(_mapDeleteFromInventoryToState);
+    on<_IncrementQuantity>(_mapIncrementToState);
+    on<_DecrementQuantity>(_mapDecrementToState);
   }
 
   MenuItemState _buildInitialState(MenuFileModel menuItem) {
@@ -34,6 +36,7 @@ class MenuItemBloc extends Bloc<MenuItemEvent, MenuItemState> {
       mealType: menuItem.mealType,
       dishType: menuItem.dishType,
       isInInventory: isInInventory,
+      orderQuantity: 1,
     );
   }
 
@@ -58,6 +61,24 @@ class MenuItemBloc extends Bloc<MenuItemEvent, MenuItemState> {
       loaded: (state) async {
         await _dataService.deleteMealFromInventory(event.key);
         emit(state.copyWith.call(isInInventory: false));
+      },
+    );
+  }
+
+  void  _mapIncrementToState(_IncrementQuantity event, Emitter<MenuItemState> emit) {
+    state.map(
+      loading: (state) async => emit(state),
+      loaded: (state) {
+        emit(state.copyWith.call(orderQuantity: state.orderQuantity + 1));
+      },
+    );
+  }
+
+  void  _mapDecrementToState(_DecrementQuantity event, Emitter<MenuItemState> emit) {
+    state.map(
+      loading: (state) async => emit(state),
+      loaded: (state) {
+        emit(state.copyWith.call(orderQuantity: state.orderQuantity - 1));
       },
     );
   }

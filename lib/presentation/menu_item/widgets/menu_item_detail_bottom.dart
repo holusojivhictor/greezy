@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:greezy/application/bloc.dart';
 import 'package:greezy/domain/app_constants.dart';
+import 'package:greezy/domain/enums/enums.dart';
 import 'package:greezy/presentation/shared/container_tag.dart';
 import 'package:greezy/presentation/shared/counter_button.dart';
+import 'package:greezy/presentation/shared/default_button.dart';
 import 'package:greezy/presentation/shared/details/detail_bottom_layout.dart';
 import 'package:greezy/presentation/shared/expandable_text.dart';
 import 'package:greezy/presentation/shared/loading.dart';
+import 'package:greezy/presentation/shared/utils/modal_bottom_sheet_utils.dart';
 import 'package:greezy/theme.dart';
 
 import 'detail_title.dart';
@@ -72,11 +75,11 @@ class MenuItemDetailBottom extends StatelessWidget {
                         color: Colors.transparent,
                         hasBorder: true,
                         iconColor: theme.primaryColor,
-                        onPressed: () {},
+                        onPressed: state.orderQuantity == 1 ? null : () => context.read<MenuItemBloc>().add(const MenuItemEvent.decrementQuantity()),
                       ),
                       const SizedBox(width: 10),
                       Text(
-                        '01',
+                        '${state.orderQuantity}',
                         style: theme.textTheme.titleMedium!.copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(width: 10),
@@ -84,7 +87,7 @@ class MenuItemDetailBottom extends StatelessWidget {
                         icon: Icons.add,
                         color: theme.primaryColor,
                         iconColor: Colors.white,
-                        onPressed: () {},
+                        onPressed: () => context.read<MenuItemBloc>().add(const MenuItemEvent.incrementQuantity()),
                       ),
                     ],
                   ),
@@ -109,6 +112,13 @@ class MenuItemDetailBottom extends StatelessWidget {
                 children: getTags(state.healthLabels),
               ),
             ),
+            const SizedBox(height: 30),
+            DefaultButton(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              isPrimary: true,
+              text: 'Order',
+              onPressed: () => ModalBottomSheetUtils.showAppModalBottomSheet(context, EndDrawerItemType.order),
+            ),
           ],
         ),
       ),
@@ -122,5 +132,3 @@ class MenuItemDetailBottom extends StatelessWidget {
     )).toList();
   }
 }
-
-

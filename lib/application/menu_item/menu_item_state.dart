@@ -17,5 +17,6 @@ class MenuItemState with _$MenuItemState {
     required List<MenuMealType> mealType,
     required List<MenuDishType> dishType,
     required bool isInInventory,
+    required int orderQuantity,
   }) = _LoadedState;
 }
