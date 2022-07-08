@@ -83,7 +83,7 @@ class _ListItem extends StatelessWidget {
           if (iconResolver != null)
             iconResolver!(index)
           else
-            Icon(icon, size: iconSize),
+            Icon(icon, size: iconSize, color: Colors.grey),
           Expanded(
             child: addTooltip
                 ? Tooltip(

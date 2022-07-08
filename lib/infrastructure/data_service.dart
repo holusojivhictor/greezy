@@ -133,6 +133,7 @@ class DataServiceImpl implements DataService {
   @override
   Future<CreditCardItem> saveCreditCard(
     String cardNumber,
+    String cardSecurityCode,
     String cardExpiryDate,
     String cardHolderName,
     String bankName,
@@ -144,6 +145,7 @@ class DataServiceImpl implements DataService {
     final creditCard = CreditCardHiveItem(
       createdAt: now,
       cardNumber: cardNumber.trim(),
+      cardSecurityCode: cardSecurityCode.trim(),
       cardExpiryDate: cardExpiryDate.trim(),
       cardHolderName: cardHolderName.trim(),
       bankName: bankName.trim(),
@@ -186,6 +188,7 @@ class DataServiceImpl implements DataService {
       key: hiveObject.key as int,
       createdAt: e.createdAt,
       cardNumber: e.cardNumber,
+      cardSecurityCode: e.cardSecurityCode,
       cardExpiryDate: e.cardExpiryDate,
       cardHolderName: e.cardHolderName,
       bankName: e.bankName,

@@ -1,3 +1,4 @@
+import 'package:awesome_card/awesome_card.dart';
 import 'package:flutter/material.dart';
 import 'package:greezy/domain/app_constants.dart';
 
@@ -68,6 +69,33 @@ class Assets {
         return 'Descending';
       default:
         throw Exception('Invalid sort direction type = $type');
+    }
+  }
+
+  static String translateCardType(CardType type) {
+    switch (type) {
+      case CardType.americanExpress:
+        return "American Express";
+      case CardType.dinersClub:
+        return "Diners club";
+      case CardType.discover:
+        return "Discover";
+      case CardType.jcb:
+        return "Job";
+      case CardType.masterCard:
+        return "Mastercard";
+      case CardType.maestro:
+        return "Maestro";
+      case CardType.rupay:
+        return "Rupay";
+      case CardType.visa:
+        return "Visa";
+      case CardType.elo:
+        return "Elo";
+      case CardType.other:
+        return "Other";
+      default:
+        throw Exception('Invalid card type provided = $type');
     }
   }
 

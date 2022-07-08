@@ -4,6 +4,9 @@ abstract class CreditCardBase {
   String get cardNumber;
   set cardNumber(String value);
 
+  String get cardSecurityCode;
+  set cardSecurityCode(String value);
+
   String get cardExpiryDate;
   set cardExpiryDate(String value);
 

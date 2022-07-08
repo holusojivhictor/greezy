@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:greezy/application/bloc.dart';
 import 'package:greezy/domain/app_constants.dart';
+import 'package:greezy/injection.dart';
 import 'package:greezy/presentation/payment/widgets/credit_cards_page.dart';
 import 'package:greezy/presentation/shared/dialogs/info_dialog.dart';
 
@@ -8,10 +11,13 @@ class PaymentPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: _AppBar(),
-      body: SafeArea(
-        child: CreditCardsPage(),
+    return BlocProvider<CreditCardsBloc>(
+      create: (ctx) => Injection.creditCardsBloc..add(const CreditCardsEvent.init()),
+      child: const Scaffold(
+        appBar: _AppBar(),
+        body: SafeArea(
+          child: CreditCardsPage(),
+        ),
       ),
     );
   }

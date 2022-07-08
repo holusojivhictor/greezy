@@ -17,15 +17,17 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
 
   final CreditCardsBloc _creditCardsBloc;
 
-  static int get maxCardNumberLength => 16;
+  static int get maxCardNumberLength => 19;
+  static int get maxCardSecurityCodeLength => 3;
   static int get maxCardExpiryDateLength => 5;
-  static int get maxCardHolderNameLength => 30;
-  static int get maxBankNameLength => 30;
+  static int get maxCardHolderNameLength => 20;
+  static int get maxBankNameLength => 15;
 
   CreditCardBloc(this._dataService, this._loggingService, this._creditCardsBloc) : super(_initialState) {
     on<_Add>(_mapAddToState);
     on<_Edit>(_mapEditToState);
     on<_CardNumberChanged>(_mapCardNumberChangedToState);
+    on<_CardSecurityCodeChanged>(_mapSecurityCodeChangedToState);
     on<_CardExpiryDateChanged>(_mapCardExpiryDateChangedToState);
     on<_CardHolderNameChanged>(_mapCardHolderNameChangedToState);
     on<_BankNameChanged>(_mapBankNameChangedToState);
@@ -37,6 +39,8 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
 
   bool _isCardNumberValid(String value) => value.isValidLength(maxLength: maxCardNumberLength);
 
+  bool _isSecurityCodeValid(String value) => value.isValidLength(maxLength: maxCardSecurityCodeLength);
+
   bool _isCardExpiryDateValid(String value) => value.isValidLength(maxLength: maxCardExpiryDateLength);
 
   bool _isCardHolderNameValid(String value) => value.isValidLength(maxLength: maxCardHolderNameLength);
@@ -45,6 +49,7 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
 
   CreditCardState _buildAddState(
     String cardNumber,
+    String cardSecurityCode,
     String cardExpiryDate,
     String cardHolderName,
     String bankName,
@@ -53,20 +58,42 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
   ) {
     return CreditCardState(
       cardNumber: cardNumber,
+      cardSecurityCode: cardSecurityCode,
       cardExpiryDate: cardExpiryDate,
       cardHolderName: cardHolderName,
       bankName: bankName,
       cardType: cardType,
       startBalance: startBalance,
+      isCardNumberValid: true,
+      isCardSecurityCodeValid: true,
+      isCardExpiryDateValid: true,
+      isCardHolderNameValid: true,
+      isBankNameValid: true,
     );
   }
 
   CreditCardState _buildEditState(int key) {
     final item = _dataService.getCreditCard(key);
-    CreditCardState state = const CreditCardState();
+    CreditCardState state = CreditCardState(cardType: item.cardType);
     return state.copyWith.call(
       key: item.key,
+      cardNumber: item.cardNumber,
+      cardSecurityCode: item.cardSecurityCode,
+      cardExpiryDate: item.cardExpiryDate,
+      cardHolderName: item.cardHolderName,
+      bankName: item.bankName,
+      startBalance: item.startBalance,
       usedCredit: item.usedCredit,
+      isCardNumberValid: _isCardNumberValid(item.cardNumber),
+      isCardNumberDirty: item.cardNumber.isNotNullEmptyOrWhitespace,
+      isCardSecurityCodeValid: _isSecurityCodeValid(item.cardSecurityCode),
+      isCardSecurityCodeDirty: item.cardSecurityCode.isNotNullEmptyOrWhitespace,
+      isCardExpiryDateValid: _isCardExpiryDateValid(item.cardExpiryDate),
+      isCardExpiryDateDirty: item.cardExpiryDate.isNotNullEmptyOrWhitespace,
+      isCardHolderNameValid: _isCardHolderNameValid(item.cardHolderName),
+      isCardHolderNameDirty: item.cardHolderName.isNotNullEmptyOrWhitespace,
+      isBankNameValid: _isBankNameValid(item.bankName),
+      isBankNameDirty: item.bankName.isNotNullEmptyOrWhitespace,
     );
   }
 
@@ -87,8 +114,10 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
       await _dataService.updateCreditCard(s.key!, s.usedCredit);
       return;
     }
+
     await _dataService.saveCreditCard(
       s.cardNumber,
+      s.cardSecurityCode,
       s.cardExpiryDate,
       s.cardHolderName,
       s.bankName,
@@ -99,7 +128,7 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
   }
 
   void _mapAddToState(_Add event, Emitter<CreditCardState> emit) {
-    emit(_buildAddState(event.defaultCardNumber, event.defaultCardExpiryDate, event.defaultCardHolderName, event.defaultBankName, event.defaultCardType, event.defaultStartBalance));
+    emit(_buildAddState(event.defaultCardNumber, event.defaultCardSecurityCode, event.defaultCardExpiryDate, event.defaultCardHolderName, event.defaultBankName, event.defaultCardType, event.defaultStartBalance));
   }
   
   void _mapEditToState(_Edit event, Emitter<CreditCardState> emit) {
@@ -108,6 +137,11 @@ class CreditCardBloc extends Bloc<CreditCardEvent, CreditCardState> {
 
   void _mapCardNumberChangedToState(_CardNumberChanged event, Emitter<CreditCardState> emit) {
     final newState = state.copyWith.call(cardNumber: event.newValue, isCardNumberValid: _isCardNumberValid(event.newValue), isCardNumberDirty: true);
+    emit(newState);
+  }
+
+  void _mapSecurityCodeChangedToState(_CardSecurityCodeChanged event, Emitter<CreditCardState> emit) {
+    final newState = state.copyWith.call(cardSecurityCode: event.newValue, isCardSecurityCodeValid: _isSecurityCodeValid(event.newValue), isCardSecurityCodeDirty: true);
     emit(newState);
   }
 

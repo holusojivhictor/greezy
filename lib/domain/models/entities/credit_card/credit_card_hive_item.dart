@@ -37,9 +37,14 @@ class CreditCardHiveItem extends HiveObject implements CreditCardBase {
   @HiveField(7)
   double usedCredit;
 
+  @override
+  @HiveField(8)
+  String cardSecurityCode;
+
   CreditCardHiveItem({
     required this.createdAt,
     required this.cardNumber,
+    required this.cardSecurityCode,
     required this.cardExpiryDate,
     required this.cardHolderName,
     required this.bankName,

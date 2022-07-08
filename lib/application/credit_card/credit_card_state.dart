@@ -5,6 +5,8 @@ abstract class _CommonBaseState {
 
   String get cardNumber;
 
+  String get cardSecurityCode;
+
   String get cardExpiryDate;
 
   String get cardHolderName;
@@ -40,11 +42,14 @@ class CreditCardState with _$CreditCardState {
     @Default(0) double usedCredit,
     @Default(CardType.masterCard) CardType cardType,
     @Default('') String cardNumber,
+    @Default('') String cardSecurityCode,
     @Default('') String cardExpiryDate,
     @Default('') String cardHolderName,
     @Default('') String bankName,
     @Default(false) bool isCardNumberValid,
     @Default(false) bool isCardNumberDirty,
+    @Default(false) bool isCardSecurityCodeValid,
+    @Default(false) bool isCardSecurityCodeDirty,
     @Default(false) bool isCardExpiryDateValid,
     @Default(false) bool isCardExpiryDateDirty,
     @Default(false) bool isCardHolderNameValid,

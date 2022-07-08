@@ -4,6 +4,7 @@ part of 'credit_card_bloc.dart';
 class CreditCardEvent with _$CreditCardEvent {
   const factory CreditCardEvent.add({
     required String defaultCardNumber,
+    required String defaultCardSecurityCode,
     required String defaultCardExpiryDate,
     required String defaultCardHolderName,
     required String defaultBankName,
@@ -18,6 +19,10 @@ class CreditCardEvent with _$CreditCardEvent {
   const factory CreditCardEvent.cardNumberChanged({
     required String newValue,
   }) = _CardNumberChanged;
+
+  const factory CreditCardEvent.cardSecurityCodeChanged({
+    required String newValue,
+  }) = _CardSecurityCodeChanged;
 
   const factory CreditCardEvent.cardExpiryDateChanged({
     required String newValue,
